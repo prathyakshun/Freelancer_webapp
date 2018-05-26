@@ -1,0 +1,3927 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Freelancer</title>
+<!-- 2017-04-29 Sat 11:25 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="Freelancer Group-1." />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Freelancer</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. Project</a></li>
+<li><a href="#sec-2">2. Functionality</a></li>
+<li><a href="#sec-3">3. How we started</a></li>
+<li><a href="#sec-4">4. Backend database</a>
+<ul>
+<li><a href="#sec-4-1">4.1. Accounts</a>
+<ul>
+<li><a href="#sec-4-1-1">4.1.1. Controllers</a></li>
+</ul>
+</li>
+<li><a href="#sec-4-2">4.2. Freelancer</a>
+<ul>
+<li><a href="#sec-4-2-1">4.2.1. Database Model</a></li>
+<li><a href="#sec-4-2-2">4.2.2. Controllers</a></li>
+</ul>
+</li>
+<li><a href="#sec-4-3">4.3. Project poster</a>
+<ul>
+<li><a href="#sec-4-3-1">4.3.1. Database Model</a></li>
+<li><a href="#sec-4-3-2">4.3.2. Controllers</a></li>
+</ul>
+</li>
+<li><a href="#sec-4-4">4.4. Projects</a>
+<ul>
+<li><a href="#sec-4-4-1">4.4.1. Database Model</a></li>
+<li><a href="#sec-4-4-2">4.4.2. Controllers</a></li>
+</ul>
+</li>
+<li><a href="#sec-4-5">4.5. Bid</a>
+<ul>
+<li><a href="#sec-4-5-1">4.5.1. Database Model</a></li>
+<li><a href="#sec-4-5-2">4.5.2. Controllers</a></li>
+</ul>
+</li>
+<li><a href="#sec-4-6">4.6. projectskills</a>
+<ul>
+<li><a href="#sec-4-6-1">4.6.1. Database Model</a></li>
+</ul>
+</li>
+<li><a href="#sec-4-7">4.7. freelancerskills</a>
+<ul>
+<li><a href="#sec-4-7-1">4.7.1. Database Model</a></li>
+</ul>
+</li>
+<li><a href="#sec-4-8">4.8. skillSet</a>
+<ul>
+<li><a href="#sec-4-8-1">4.8.1. Database Model</a></li>
+</ul>
+</li>
+<li><a href="#sec-4-9">4.9. notifications</a>
+<ul>
+<li><a href="#sec-4-9-1">4.9.1. Database Model</a></li>
+</ul>
+</li>
+<li><a href="#sec-4-10">4.10. otp</a>
+<ul>
+<li><a href="#sec-4-10-1">4.10.1. Database Model</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#sec-5">5. Frontend model</a>
+<ul>
+<li><a href="#sec-5-1">5.1. JAVA-SCRIPT Files</a></li>
+</ul>
+</li>
+<li><a href="#sec-6">6. Security features</a>
+<ul>
+<li><a href="#sec-6-1">6.1. Mandatory features</a></li>
+<li><a href="#sec-6-2">6.2. Bonus features</a></li>
+</ul>
+</li>
+<li><a href="#sec-7">7. Extra features</a>
+<ul>
+<li><a href="#sec-7-1">7.1. Added a OTP request while registering users, to improve security.</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Project</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>Freelancer : A web application which features Freelancers and Project posters.
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Functionality</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>Project posters post projects what they want done.
+</li>
+<li>Freelancer can search for projects by name or skills and sort by popularity (Number of bids made), budget/pay.
+</li>
+<li>Freelancers can place bids on a project with Time-duration and pay.
+</li>
+<li>The duration of the project is specified by the Project poster.
+</li>
+<li>Project poster selects the most suitable Freelancer and assigns him the project. The freelancer gets notified by the same.
+</li>
+<li>After the project is completed, the Freelancer and Project poster give each other rating.
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> How we started</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li>We designed the database schema (visual representation with arrows depicting relations).
+</li>
+<li>The backend basic databases for most of the tables were created and tested.
+</li>
+<li>The User authentication for Login was built in backend.
+</li>
+<li>The Home page for the web application was designed and linked with the backend.
+</li>
+<li>The Home page for Freelancer and Project poster was designed.
+</li>
+<li>The edit feature for Freelancer and Project Poster was built. 
+</li>
+<li>The Json responses were returned from the backend.
+</li>
+<li>The AJAX calls were made to retrieve the data from the backend and populate the contents of the page.
+</li>
+<li>The 'Add Project' feature was built for the Project-Poster.
+</li>
+<li>The search query option for a freelancer to search for projects based on filters was built at the backend.
+</li>
+<li>The front end page for search was made and linked with backend.
+</li>
+<li>Bids feature for Freelancer was made to make bids with budget and time-frame.
+</li>
+<li>The view of the Project poster Bids for his projects was built.
+</li>
+<li>Assigning a particular Freelancer to a project out of the bids was built.
+</li>
+<li>The home page for freelancer and Project poster was improved.
+</li>
+<li>The Search query views were improved.
+</li>
+<li>The rating feature for freelancer and Project poster was built.
+</li>
+<li>The notification feature was built to notify the Freelancer when a project is assigned.
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Backend database</h2>
+<div class="outline-text-2" id="text-4">
+</div><div id="outline-container-sec-4-1" class="outline-3">
+<h3 id="sec-4-1"><span class="section-number-3">4.1</span> Accounts</h3>
+<div class="outline-text-3" id="text-4-1">
+</div><div id="outline-container-sec-4-1-1" class="outline-4">
+<h4 id="sec-4-1-1"><span class="section-number-4">4.1.1</span> Controllers</h4>
+<div class="outline-text-4" id="text-4-1-1">
+</div><ol class="org-ol"><li><a id="sec-4-1-1-1" name="sec-4-1-1-1"></a>regUser<br  /><ol class="org-ol"><li><a id="sec-4-1-1-1-1" name="sec-4-1-1-1-1"></a>Description<br  /><div class="outline-text-6" id="text-4-1-1-1-1">
+<p>
+The function is triggered when a user gets registered.
+The required fields of username, password, otp, first name ,user_type, last_name are retrieved.
+Based on the user_type, Freelancer or Project giver user is created.
+</p>
+</div>
+</li>
+<li><a id="sec-4-1-1-1-2" name="sec-4-1-1-1-2"></a>Code Snippet<br  /><div class="outline-text-6" id="text-4-1-1-1-2">
+<div class="org-src-container">
+
+<pre class="src src-python3">@cache_control(no_cache=True, must_revalidate=True, no_store=True)
+@ensure_csrf_cookie
+def regUser(request):
+    ''' Function to register a user '''
+
+    otp = request.POST.get('otp')
+    username = request.POST.get('username', '')
+    password = request.POST.get('password', '')
+    email = request.POST.get('email', '')
+    try:
+	validate_email(email)
+    except:
+	response = HttpResponse('/#Register')
+	return response
+    first_name = request.POST.get('fname', '')
+    last_name = request.POST.get('lname', '')
+    user_type = request.POST.get('userType')
+    confirm_password = request.POST.get('confirm_password')
+    if (password != confirm_password):
+	response = HttpResponse('/#Register')
+	return response
+    first_name = request.POST.get('fname', '')
+    last_name = request.POST.get('lname', '')
+    otpobj = OTP.objects.filter(email=email)
+    if not otpobj:
+	return HttpResponse("/#Register")
+    if otp != str(otpobj[0].otp):
+	return HttpResponse("/#Register")
+    otpobj.delete()
+    user = User.objects.create_user(
+	username=username, password=password, first_name=user_type)
+    if user is not None:
+	if (user_type == 'freelancer'):
+	    Freelancer.objects.create(
+		first_name=first_name, last_name=last_name, emailAddress=email, account=user, rating=0)
+	    auth.login(request, user)
+	    return HttpResponse('freelancer')
+	elif (user_type == 'projectPoster'):
+	    ProjectGiver.objects.create(
+		first_name=first_name, last_name=last_name, emailAddress=email, account=user, rating=0)
+	    auth.login(request, user)
+	    return HttpResponse('projectgiver')
+    else:
+	return HttpResponse('/#Register')
+</pre>
+</div>
+</div>
+</li></ol>
+</li>
+<li><a id="sec-4-1-1-2" name="sec-4-1-1-2"></a>landingPage<br  /><ol class="org-ol"><li><a id="sec-4-1-1-2-1" name="sec-4-1-1-2-1"></a>Description<br  /><div class="outline-text-6" id="text-4-1-1-2-1">
+<p>
+The function is used to render the home page for the freelancer/project giver
+</p>
+</div>
+</li>
+<li><a id="sec-4-1-1-2-2" name="sec-4-1-1-2-2"></a>Code Snippet<br  /><div class="outline-text-6" id="text-4-1-1-2-2">
+<div class="org-src-container">
+
+<pre class="src src-python3">@ensure_csrf_cookie
+@cache_control(no_cache=True, must_revalidate=True, no_store=True)
+def landingPage(request):
+    ''' Function to render the home page of the website '''
+
+    if request.user.is_authenticated():
+	if request.user.first_name == 'freelancer':
+	    return HttpResponseRedirect('/freelancer')
+	else:
+	    return HttpResponseRedirect('/projectgiver')
+    return render(request, 'index.html')
+</pre>
+</div>
+</div>
+</li></ol>
+</li>
+<li><a id="sec-4-1-1-3" name="sec-4-1-1-3"></a>authen<br  /><ol class="org-ol"><li><a id="sec-4-1-1-3-1" name="sec-4-1-1-3-1"></a>Description<br  /><div class="outline-text-6" id="text-4-1-1-3-1">
+<p>
+Gets the username and password from the front end. If authenticated, the user is logged in.
+Else, the user is redirected to the home page.
+</p>
+</div>
+</li>
+<li><a id="sec-4-1-1-3-2" name="sec-4-1-1-3-2"></a>Code Snippet<br  /><div class="outline-text-6" id="text-4-1-1-3-2">
+<div class="org-src-container">
+
+<pre class="src src-python3">@cache_control(no_cache=True, must_revalidate=True, no_store=True)
+@ensure_csrf_cookie
+def authen(request):
+    ''' Function to check login credentials and sign-in the user if the credentials are correct '''
+
+    username = request.POST.get('username', '')
+    password = request.POST.get('password', '')
+    user = auth.authenticate(username=username, password=password)
+    if user is not None:
+	auth.login(request, user)
+	if User.objects.get(username=username).first_name == 'freelancer':
+	    return HttpResponse('freelancer')
+	if User.objects.get(username=username).first_name == 'projectPoster':
+	    return HttpResponse('projectgiver')
+    else:
+	return HttpResponse('/#Login')
+</pre>
+</div>
+</div>
+</li></ol>
+</li>
+<li><a id="sec-4-1-1-4" name="sec-4-1-1-4"></a>usernames<br  /><ol class="org-ol"><li><a id="sec-4-1-1-4-1" name="sec-4-1-1-4-1"></a>Description<br  /><div class="outline-text-6" id="text-4-1-1-4-1">
+<p>
+Function sends the list of all exosting usernames and email-IDs to the home page.
+</p>
+</div>
+</li>
+<li><a id="sec-4-1-1-4-2" name="sec-4-1-1-4-2"></a>Code Snippet<br  /><div class="outline-text-6" id="text-4-1-1-4-2">
+<div class="org-src-container">
+
+<pre class="src src-python3">def usernames(request):
+    ''' Function to send the list of all existing usernames and email-IDs to the home page '''
+
+    emailarray = []
+    fl_obj = Freelancer.objects.all()
+    pg_obj = ProjectGiver.objects.all()
+    for obj in fl_obj:
+	emailarray.append(obj.emailAddress)
+    for obj in pg_obj:
+	emailarray.append(obj.emailAddress)
+    usernamearray = []
+    user_obj = User.objects.all()
+    for obj in user_obj:
+	usernamearray.append(obj.username)
+    print(csrf(request))
+    c = {'email': emailarray, 'username': usernamearray,
+	 'csrf_token': str(csrf(request)['csrf_token'])}
+    return JsonResponse(c)
+</pre>
+</div>
+</div>
+</li></ol>
+</li>
+
+<li><a id="sec-4-1-1-5" name="sec-4-1-1-5"></a>sendOtp<br  /><ol class="org-ol"><li><a id="sec-4-1-1-5-1" name="sec-4-1-1-5-1"></a>Description<br  /><div class="outline-text-6" id="text-4-1-1-5-1">
+<p>
+The function generates an otp at the time of registration and emails it to the user
+</p>
+</div>
+</li>
+<li><a id="sec-4-1-1-5-2" name="sec-4-1-1-5-2"></a>Code Snippet<br  /><div class="outline-text-6" id="text-4-1-1-5-2">
+<div class="org-src-container">
+
+<pre class="src src-python3">@csrf_exempt
+def sendOtp(request):
+    ''' Function to generate an OTP at the time of registration and email it to the user '''
+
+    email = request.POST.get('email')
+    totp = pyotp.TOTP('base32secret3232', 6, interval=1)
+    print(email)
+    otp = totp.now()
+    send_mail('Do Not Reply', 'Your OTP is ' + otp + '. Do not share this with anyone',
+	      'Freelancer freelancerakpy@gmail.com', [email])
+    OTP.objects.filter(email=email).delete()
+    OTP.objects.create(otp=otp, email=email)
+    return HttpResponse("SUCCESS")
+</pre>
+</div>
+</div>
+</li></ol>
+</li></ol>
+</div>
+</div>
+<div id="outline-container-sec-4-2" class="outline-3">
+<h3 id="sec-4-2"><span class="section-number-3">4.2</span> Freelancer</h3>
+<div class="outline-text-3" id="text-4-2">
+</div><div id="outline-container-sec-4-2-1" class="outline-4">
+<h4 id="sec-4-2-1"><span class="section-number-4">4.2.1</span> Database Model</h4>
+<div class="outline-text-4" id="text-4-2-1">
+</div><ol class="org-ol"><li><a id="sec-4-2-1-1" name="sec-4-2-1-1"></a>Code Snippet<br  /><div class="outline-text-5" id="text-4-2-1-1">
+<div class="org-src-container">
+
+<pre class="src src-python3">def get_image_path(instance, filename):
+    return os.path.join('FL', 'static','images','profile_pic',str(instance.account.username)+'.jpeg')
+
+class Freelancer(models.Model):
+    first_name = models.CharField(max_length = 50)
+    last_name =  models.CharField(max_length = 50)
+    emailAddress =  models.CharField(max_length = 250)
+    account = models.ForeignKey(User,on_delete = models.CASCADE)
+    rating = models.DecimalField(max_digits=3,decimal_places=2,blank=True,null=True)                # X.YY
+    profile_image = models.ImageField(upload_to=get_image_path,blank=True,null=True,default='../static/images/index.jpeg')
+    def __str__(self):
+	return "Freelancer id:"+str(self.id)+" name:"+self.first_name
+</pre>
+</div>
+</div>
+</li>
+
+<li><a id="sec-4-2-1-2" name="sec-4-2-1-2"></a>Database Fields<br  /><div class="outline-text-5" id="text-4-2-1-2">
+<ul class="org-ul">
+<li><code>id (Primary key)</code> : Not mentioned but automatically added by django with auto-increment 
+</li>
+<li><code>first_name</code> : Accepts characters to store the first name of the freelancer.
+</li>
+<li><code>last_name</code> : Accepts characters to store the last name of the freelancer.
+</li>
+<li><code>emailAddress</code> : Accepts characters to store the email address of the freelancer.
+</li>
+<li><code>account (Foreign key)</code> : Refers to the particular user in the User database.
+</li>
+<li><code>rating</code> : Accepts decimal values for the ratings.
+</li>
+<li><code>profile_image</code> : Accepts an image field.
+</li>
+<li><code>get_image_path</code>:is used for storing the retrieved image in the particular location. The location of the image is stored in the database.
+</li>
+</ul>
+</div>
+</li></ol>
+</div>
+
+
+<div id="outline-container-sec-4-2-2" class="outline-4">
+<h4 id="sec-4-2-2"><span class="section-number-4">4.2.2</span> Controllers</h4>
+<div class="outline-text-4" id="text-4-2-2">
+</div><ol class="org-ol"><li><a id="sec-4-2-2-1" name="sec-4-2-2-1"></a>render_page<br  /><ol class="org-ol"><li><a id="sec-4-2-2-1-1" name="sec-4-2-2-1-1"></a>Description<br  /><div class="outline-text-6" id="text-4-2-2-1-1">
+<p>
+The Freelancer object is queried from the database based on the user logged in.
+The bids made, skills, ongoing projects, completed projects, skill list, freelancer skill list and freelancer details are queried
+for the Freelancer and a Json response is returned.
+</p>
+</div>
+</li>
+<li><a id="sec-4-2-2-1-2" name="sec-4-2-2-1-2"></a>Code Snippet<br  /><div class="outline-text-6" id="text-4-2-2-1-2">
+<div class="org-src-container">
+
+<pre class="src src-python3">@cache_control(no_cache=True, must_revalidate=True, no_store=True)
+def render_page(request):
+	fl = Freelancer.objects.get(account=request.user)
+	madebids=Bid.objects.filter(freelancer=fl)
+	bidsMade=[]
+	for b in madebids:
+		bidsMade.append({'Title': b.project.Title, 'projectgiver':b.project_poster.account.username,'amount':b.amount,'duration':b.duration})
+	availableSkills =skillSet.objects.all()
+	skill_list=[]
+	for skill in availableSkills:
+		skill_list.append(skill.skillname)
+	compl_proj = Project.objects.filter(freelancerAssigned=fl,status='completed')
+	print(compl_proj)
+	compl_proj_list = []
+	for obj in compl_proj:
+		innerdict = {'Title':obj.Title,'description':obj.description ,'id':obj.id}
+		compl_proj_list.append(innerdict)
+	ongo_proj = Project.objects.filter(status='ongoing',freelancerAssigned=fl)
+	print(ongo_proj)
+	ongo_proj_list = []
+	for obj in ongo_proj:
+		innerdict = {'Title':obj.Title,'description':obj.description,'id':obj.id}
+		ongo_proj_list.append(innerdict)
+	freelancer_skill_list = []
+	freelancer_skill = FreelancerSkills.objects.filter(freelancer__account = request.user)
+	for obj in freelancer_skill:
+		innerdict = {'name':obj.skillname}
+		freelancer_skill_list.append(innerdict)
+	# return HttpResponse(skill_list)
+	dict = {'first_name':fl.first_name,'last_name':fl.last_name,'emailAddress':fl.emailAddress,
+			'rating':fl.rating,'profile_image':str(fl.profile_image),'username':fl.account.username,
+			'skills':skill_list,'compl_proj_list':compl_proj_list,'ongo_proj_list':ongo_proj_list,'csrf_token':str(csrf(request)['csrf_token']),
+			'freelancer_skill':freelancer_skill_list,'bids':bidsMade}
+	return JsonResponse(dict,safe=False)
+</pre>
+</div>
+</div>
+</li></ol>
+</li>
+
+<li><a id="sec-4-2-2-2" name="sec-4-2-2-2"></a>homeFL<br  /><ol class="org-ol"><li><a id="sec-4-2-2-2-1" name="sec-4-2-2-2-1"></a>Description<br  /><div class="outline-text-6" id="text-4-2-2-2-1">
+<p>
+Redirects to front page for Freelancer based on whether the login was successful or not
+</p>
+</div>
+</li>
+<li><a id="sec-4-2-2-2-2" name="sec-4-2-2-2-2"></a>Code Snippet<br  /><div class="outline-text-6" id="text-4-2-2-2-2">
+<div class="org-src-container">
+
+<pre class="src src-python3">@cache_control(no_cache=True, must_revalidate=True, no_store=True)
+def homeFL(request):
+	try:
+		fl = Freelancer.objects.get(account=request.user)
+		return render(request,'entry.html')
+	except:
+		return HttpResponseRedirect('/#login')
+</pre>
+</div>
+</div>
+</li></ol>
+</li>
+<li><a id="sec-4-2-2-3" name="sec-4-2-2-3"></a>flSignout<br  /><ol class="org-ol"><li><a id="sec-4-2-2-3-1" name="sec-4-2-2-3-1"></a>Description<br  /><div class="outline-text-6" id="text-4-2-2-3-1">
+<p>
+Signs out the Freelancer and redirects him to the home page 
+</p>
+</div>
+</li>
+<li><a id="sec-4-2-2-3-2" name="sec-4-2-2-3-2"></a>Code Snippet<br  /><div class="outline-text-6" id="text-4-2-2-3-2">
+<div class="org-src-container">
+
+<pre class="src src-python3">def flSignout(request):
+	auth.logout(request)
+	return HttpResponseRedirect('/')
+</pre>
+</div>
+</div>
+</li></ol>
+</li>
+<li><a id="sec-4-2-2-4" name="sec-4-2-2-4"></a>fl_edit_profile<br  /><ol class="org-ol"><li><a id="sec-4-2-2-4-1" name="sec-4-2-2-4-1"></a>Description<br  /><div class="outline-text-6" id="text-4-2-2-4-1">
+<p>
+The new fields(first name, last name, email address) are retrieved and the database fields for the Freelancer are updated with the new fields.
+</p>
+</div>
+</li>
+<li><a id="sec-4-2-2-4-2" name="sec-4-2-2-4-2"></a>Code Snippet<br  /><div class="outline-text-6" id="text-4-2-2-4-2">
+<div class="org-src-container">
+
+<pre class="src src-python3">@cache_control(no_cache=True, must_revalidate=True, no_store=True)
+def fl_edit_profile(request):
+	#try:
+	print("edit profile")
+	first_name = request.POST.get('fname',"")
+	last_name = request.POST.get('lname',"")
+	email = request.POST.get('email',"")
+	print("first name",first_name)
+	print("last name",last_name)
+	freelancerobj = Freelancer.objects.get(account = request.user)
+	freelancerobj.first_name = first_name
+	freelancerobj.last_name = last_name
+	freelancerobj.emailAddress = email
+	freelancerobj.save()
+	return HttpResponseRedirect('/freelancer')
+	#except:
+	#       response = HttpResponse("Unsuccessful Edit :(")
+	#       return response
+</pre>
+</div>
+</div>
+</li></ol>
+</li>
+<li><a id="sec-4-2-2-5" name="sec-4-2-2-5"></a>fl_edit_pic<br  /><ol class="org-ol"><li><a id="sec-4-2-2-5-1" name="sec-4-2-2-5-1"></a>Description<br  /><div class="outline-text-6" id="text-4-2-2-5-1">
+<p>
+The file object  is retrieved and the profile_image field of the Freelancer is updated with the new file.
+</p>
+</div>
+</li>
+<li><a id="sec-4-2-2-5-2" name="sec-4-2-2-5-2"></a>Code Snippet<br  /><div class="outline-text-6" id="text-4-2-2-5-2">
+<div class="org-src-container">
+
+<pre class="src src-python3">@cache_control(no_cache=True, must_revalidate=True, no_store=True)
+def fl_edit_pic(request):
+	profile_image_src = request.FILES['profile_image']
+	print("profile_image_src: "+ str(profile_image_src))
+	freelancerobj = Freelancer.objects.get(account = request.user)
+	freelancerobj.profile_image = profile_image_src
+	freelancerobj.save()
+	return HttpResponseRedirect('/freelancer')
+</pre>
+</div>
+</div>
+</li></ol>
+</li>
+<li><a id="sec-4-2-2-6" name="sec-4-2-2-6"></a>Skills<br  /><ol class="org-ol"><li><a id="sec-4-2-2-6-1" name="sec-4-2-2-6-1"></a>Description<br  /><div class="outline-text-6" id="text-4-2-2-6-1">
+<p>
+All the existing skills are queried and a Json response containg the list of skills is retured
+</p>
+</div>
+</li>
+<li><a id="sec-4-2-2-6-2" name="sec-4-2-2-6-2"></a>Code Snippet<br  /><div class="outline-text-6" id="text-4-2-2-6-2">
+<div class="org-src-container">
+
+<pre class="src src-python3">@cache_control(no_cache=True, must_revalidate=True, no_store=True)
+def skills(request):
+	availableSkills =skillSet.objects.all()
+	skill_list=[]
+	for skill in availableSkills:
+		skill_list.append(skill.skillname)
+	dict={'skills':skill_list}
+	return JsonResponse(dict)
+</pre>
+</div>
+</div>
+</li></ol>
+</li>
+<li><a id="sec-4-2-2-7" name="sec-4-2-2-7"></a>search_render<br  /><ol class="org-ol"><li><a id="sec-4-2-2-7-1" name="sec-4-2-2-7-1"></a>Description<br  /><div class="outline-text-6" id="text-4-2-2-7-1">
+<p>
+Redirects Freelancer to the search page for searching for projects
+</p>
+</div>
+</li>
+<li><a id="sec-4-2-2-7-2" name="sec-4-2-2-7-2"></a>Code Snippet<br  /><div class="outline-text-6" id="text-4-2-2-7-2">
+<div class="org-src-container">
+
+<pre class="src src-python3">@cache_control(no_cache=True, must_revalidate=True, no_store=True)
+def search_render(request):
+	if request.user.is_authenticated():
+		return render(request,'search.html')
+	else:
+		return HttpResponseRedirect('/#login')
+</pre>
+</div>
+</div>
+</li></ol>
+</li>
+<li><a id="sec-4-2-2-8" name="sec-4-2-2-8"></a>search_skill<br  /><ol class="org-ol"><li><a id="sec-4-2-2-8-1" name="sec-4-2-2-8-1"></a>Description<br  /><div class="outline-text-6" id="text-4-2-2-8-1">
+<p>
+The available projects are filtered based on the skills checked in the checkbox.
+Based on the ordering, the projects can be sorted by bids or budget.
+The Json response of the projects is returned.
+</p>
+</div>
+</li>
+<li><a id="sec-4-2-2-8-2" name="sec-4-2-2-8-2"></a>Code Snippet<br  /><div class="outline-text-6" id="text-4-2-2-8-2">
+<div class="org-src-container">
+
+<pre class="src src-python3">@cache_control(no_cache=True, must_revalidate=True, no_store=True)
+def search_skill(request):
+	#skill_type = request.POST.get('skill_type','html')
+	skillarr = request.GET.getlist('checks[]')
+	ordering = request.GET.get('ordering')
+	proj_obj = ProjectSkills.objects.all()
+	queries = [Q(skill__skillname__icontains=skill) for skill in skillarr]
+	print(queries)
+	if queries != []:
+		query = queries.pop()
+	else:
+		query = Q()
+	for q in queries:
+		query |= q
+
+	proj_obj2=proj_obj.filter(query)
+	proj_obj1=proj_obj2.filter(projectid__status='available')
+	a=proj_obj1.values_list('projectid_id',flat=True).distinct()
+	b=Project.objects.filter(id__in=a)
+	if (ordering == 'bids'):
+		proj_obj1 = b.order_by('-noBids')
+	elif (ordering == 'budget'):
+		proj_obj1 = b.order_by('-budget')
+	project_list = []
+	for obj in proj_obj1:
+		skil=ProjectSkills.objects.filter(projectid=obj).values_list('skill__skillname',flat=True)
+		if Bid.objects.filter(freelancer=Freelancer.objects.filter(account=request.user),project=obj):
+			buttonVal="disabled"
+		else:
+			buttonVal=''
+		innerdict = {'skill_type':list(skil),'Title':obj.Title,'ProjectPoster':obj.proj_poster.account.username,'buttonVal':buttonVal,
+					 'description':obj.description,'budget':obj.budget, 'deadline':obj.deadline, 'nobids':obj.noBids,'projectid':obj.id}
+		project_list.append(innerdict)
+	dict = {'proj_list':project_list}
+	return JsonResponse(dict)
+</pre>
+</div>
+</div>
+</li></ol>
+</li>
+<li><a id="sec-4-2-2-9" name="sec-4-2-2-9"></a>search_name<br  /><ol class="org-ol"><li><a id="sec-4-2-2-9-1" name="sec-4-2-2-9-1"></a>Description<br  /><div class="outline-text-6" id="text-4-2-2-9-1">
+<p>
+Projects are searched based on the name entered in the search.
+The ordering is done based on the ordering chosen: number of bids or the budget.
+Json response of the projects is returned.
+</p>
+</div>
+</li>
+<li><a id="sec-4-2-2-9-2" name="sec-4-2-2-9-2"></a>Code Snippet<br  /><div class="outline-text-6" id="text-4-2-2-9-2">
+<div class="org-src-container">
+
+<pre class="src src-python3">@cache_control(no_cache=True, must_revalidate=True, no_store=True)
+def search_name(request):
+	proj_name = request.POST.get('proj_name','')
+	ordering = request.POST.get('ordering')
+	if (ordering == 'bids'):
+		proj_obj = ProjectSkills.objects.filter(skill__skillname__icontains=proj_name,projectid__status='available').order_by('-project__noBids')
+	elif (ordering == 'budget'):
+		proj_obj = ProjectSkills.objects.filter(skill__skillname__icontains=proj_name,projectid__status='available').order_by('-project__budget')
+	proj_list=[]
+	for obj in proj_obj:
+		innerdict = {'skill_type':obj.skillname,'Title':obj.projectid.Title,'ProjectPoster':obj.projectid.proj_poster.account.username,
+					 'description':obj.projectid.description,'budget':obj.projectid.budget}
+		project_list.append(innerdict)
+	dict = {'proj_list':proj_list}
+	return JsonResponse(dict)
+</pre>
+</div>
+</div>
+</li></ol>
+</li>
+<li><a id="sec-4-2-2-10" name="sec-4-2-2-10"></a>add_skill<br  /><ol class="org-ol"><li><a id="sec-4-2-2-10-1" name="sec-4-2-2-10-1"></a>Description<br  /><div class="outline-text-6" id="text-4-2-2-10-1">
+<p>
+The checked skills are added to the Freelancer Skills database creating a relation between Freelancer and Skill.
+</p>
+</div>
+</li>
+<li><a id="sec-4-2-2-10-2" name="sec-4-2-2-10-2"></a>Code Snippet<br  /><div class="outline-text-6" id="text-4-2-2-10-2">
+<div class="org-src-container">
+
+<pre class="src src-python3">def add_skill(request):
+	skillarr = request.GET.getlist('checks[]')
+	fl = Freelancer.objects.get(account = request.user)
+	for i in range(len(skillarr)):
+		FreelancerSkills.objects.create(skillname=skillarr[i],freelancer=fl)
+	return HttpResponse("SUCCESS")
+</pre>
+</div>
+</div>
+</li></ol>
+</li>
+<li><a id="sec-4-2-2-11" name="sec-4-2-2-11"></a>notification_freelancer<br  /><ol class="org-ol"><li><a id="sec-4-2-2-11-1" name="sec-4-2-2-11-1"></a>Description<br  /><div class="outline-text-6" id="text-4-2-2-11-1">
+<p>
+The freelancer object is queried from the database based on the user logged in.
+The notifications are queried and filtered by the freelancer object and whether the seen_status is 'unseen'
+A Json response of project poster name, freelaner name, project title, notification type is returned
+noti_type - 'available' : Bid Placed
+            'ongoing' : Project Assigned
+            'completed' : Project Completed
+</p>
+</div>
+</li>
+<li><a id="sec-4-2-2-11-2" name="sec-4-2-2-11-2"></a>Code Snippet<br  /><div class="outline-text-6" id="text-4-2-2-11-2">
+<div class="org-src-container">
+
+<pre class="src src-python3">def notification_freelancer(request):
+	freelancer = Freelancer.objects.filter(account=request.user)
+	noti_obj = Notification.objects.filter(freelancer=freelancer,seen_status='unseen')
+	noti_list = []
+	for obj in noti_obj:
+		innerdict = {'project_poster':obj.project_poster.first_name,'freelancer':obj.freelancer.first_name,'project':obj.project.Title,'noti_type':obj.project.status}
+		obj.seen_status='seen'
+		obj.save()
+		noti_list.append(innerdict)
+	dict = {'notification_list':noti_list}
+	return JsonResponse(dict)
+</pre>
+</div>
+</div>
+</li></ol>
+</li>
+<li><a id="sec-4-2-2-12" name="sec-4-2-2-12"></a>rating_from_freelancer<br  /><ol class="org-ol"><li><a id="sec-4-2-2-12-1" name="sec-4-2-2-12-1"></a>Description<br  /><div class="outline-text-6" id="text-4-2-2-12-1">
+<p>
+The rating and project id values are retrieved from the front end. The new rating is caculated by
+new rating = ((old_rating * prev_completed_projects) + given_rating)/current_completed_projects
+</p>
+</div>
+</li>
+<li><a id="sec-4-2-2-12-2" name="sec-4-2-2-12-2"></a>Code Snippet<br  /><div class="outline-text-6" id="text-4-2-2-12-2">
+<div class="org-src-container">
+
+<pre class="src src-python3">def rating_from_freelancer(request):
+	rating = request.POST.get('rating')
+	project_id = request.POST.get('project_id')
+	project = Project.objects.get(id=project_id)
+	project_poster = project.proj_poster
+	project_poster_old_rating = project_poster.rating
+	project_poster_comp_projects = Project.objects.filter(freelancerAssigned=fl,status='completed').count()
+	project_poster_new_rating = ((project_poster_old_rating*(project_poster_comp_projects - 1)) + rating ) / project_poster_comp_projects
+	project_poster.rating = project_poster_new_rating
+	project_poster.save()
+</pre>
+</div>
+</div>
+</li></ol>
+</li>
+<li><a id="sec-4-2-2-13" name="sec-4-2-2-13"></a>click_notification<br  /><ol class="org-ol"><li><a id="sec-4-2-2-13-1" name="sec-4-2-2-13-1"></a>Description<br  /><div class="outline-text-6" id="text-4-2-2-13-1">
+<p>
+This function is triggered when a Freelancer clicks his notification.
+The notifications are marked as seen
+</p>
+</div>
+</li>
+<li><a id="sec-4-2-2-13-2" name="sec-4-2-2-13-2"></a>Code Snippet<br  /><div class="outline-text-6" id="text-4-2-2-13-2">
+<div class="org-src-container">
+
+<pre class="src src-python3">def click_notification(request):
+''' Function which removes the notification when Freelancer opens notifications '''
+
+    seenarr = request.POST.getlist('seenarr[]')
+    print(seenarr)
+    for i in range(len(seenarr)):
+	obj = Notification.objects.get(id=seenarr[i])
+	obj.seen_status = 'freelancer_seen'
+	obj.save()
+    return HttpResponse('Success')
+</pre>
+</div>
+</div>
+</li></ol>
+</li></ol>
+</div>
+</div>
+<div id="outline-container-sec-4-3" class="outline-3">
+<h3 id="sec-4-3"><span class="section-number-3">4.3</span> Project poster</h3>
+<div class="outline-text-3" id="text-4-3">
+</div><div id="outline-container-sec-4-3-1" class="outline-4">
+<h4 id="sec-4-3-1"><span class="section-number-4">4.3.1</span> Database Model</h4>
+<div class="outline-text-4" id="text-4-3-1">
+</div><ol class="org-ol"><li><a id="sec-4-3-1-1" name="sec-4-3-1-1"></a>Database Fields<br  /><div class="outline-text-5" id="text-4-3-1-1">
+<ul class="org-ul">
+<li><code>id (Primary key)</code> : Not mentioned but automatically added by django with auto-increment 
+</li>
+<li><code>first_name</code> : Accepts characters to store the first name of the freelancer.
+</li>
+<li><code>last_name</code> : Accepts characters to store the last name of the freelancer.
+</li>
+<li><code>emailAddress</code> : Accepts characters to store the email address of the freelancer.
+</li>
+<li><code>account (Foreign key)</code> : Refers to the particular user in the User database.
+</li>
+<li><code>rating</code> : Accepts decimal values for the ratings.
+</li>
+<li><code>profile_image</code> : Accepts an image field.
+</li>
+<li><code>get_image_path</code> is used for storing the retrieved image in the particular location. The location of the image is stored in the database.
+</li>
+</ul>
+</div>
+</li>
+<li><a id="sec-4-3-1-2" name="sec-4-3-1-2"></a>Code Snippet<br  /><div class="outline-text-5" id="text-4-3-1-2">
+<div class="org-src-container">
+
+<pre class="src src-python3">def get_image_path(instance, filename):
+    return os.path.join('media',str(instance.account.username)+'.jpeg')
+
+class ProjectGiver(models.Model):
+	first_name = models.CharField(max_length = 50)
+	last_name = models.CharField(max_length = 50)
+	account = models.ForeignKey(User,on_delete = models.CASCADE)
+	emailAddress =  models.CharField(max_length = 250)              
+	rating = models.DecimalField(max_digits=3,decimal_places=2,blank=True,null=True)                # X.YY
+	profile_image = models.ImageField(upload_to=get_image_path,blank=True,null=True,default='../static/images/index.jpeg')
+
+	def __str__(self):
+		return "ProjectGiver Id:"+ str(self.id)+" name:"+self.first_name
+</pre>
+</div>
+</div>
+</li></ol>
+</div>
+<div id="outline-container-sec-4-3-2" class="outline-4">
+<h4 id="sec-4-3-2"><span class="section-number-4">4.3.2</span> Controllers</h4>
+<div class="outline-text-4" id="text-4-3-2">
+</div><ol class="org-ol"><li><a id="sec-4-3-2-1" name="sec-4-3-2-1"></a>homePJ<br  /><ol class="org-ol"><li><a id="sec-4-3-2-1-1" name="sec-4-3-2-1-1"></a>Description<br  /><div class="outline-text-6" id="text-4-3-2-1-1">
+<p>
+The function searcher for a freelancer based on the user login. If the user exists, redirection happens to the user page else the login homepage is reloaded
+</p>
+</div>
+</li>
+<li><a id="sec-4-3-2-1-2" name="sec-4-3-2-1-2"></a>Code Snippet<br  /><div class="outline-text-6" id="text-4-3-2-1-2">
+<div class="org-src-container">
+
+<pre class="src src-python3">def homePJ(request):
+	try:
+		f=ProjectGiver.objects.filter(account=request.user)
+		c={}
+		c.update(csrf(request))
+		c.update({'project_giver':f[0]})
+		return render(request,'entry2.html',c)
+	except:
+		return HttpResponseRedirect('/#login')
+</pre>
+</div>
+</div>
+</li></ol>
+</li>
+<li><a id="sec-4-3-2-2" name="sec-4-3-2-2"></a>pjSignout<br  /><ol class="org-ol"><li><a id="sec-4-3-2-2-1" name="sec-4-3-2-2-1"></a>Description<br  /><div class="outline-text-6" id="text-4-3-2-2-1">
+<p>
+The project giver is logged out and redirection happens to the homepage
+</p>
+</div>
+</li>
+<li><a id="sec-4-3-2-2-2" name="sec-4-3-2-2-2"></a>Code Snippet<br  /><div class="outline-text-6" id="text-4-3-2-2-2">
+<div class="org-src-container">
+
+<pre class="src src-python3">def pjSignout(request):
+	auth.logout(request)
+	return HttpResponseRedirect('/')
+</pre>
+</div>
+</div>
+</li></ol>
+</li>
+<li><a id="sec-4-3-2-3" name="sec-4-3-2-3"></a>render_page<br  /><ol class="org-ol"><li><a id="sec-4-3-2-3-1" name="sec-4-3-2-3-1"></a>Description<br  /><div class="outline-text-6" id="text-4-3-2-3-1">
+<p>
+The Project poster object is queried from the database based on the user logged in.
+The bids received, skills, ongoing projects, completed projects, project poster details are queried
+for the Project poster and a Json response is returned.
+</p>
+</div>
+</li>
+<li><a id="sec-4-3-2-3-2" name="sec-4-3-2-3-2"></a>Code Snippet<br  /><div class="outline-text-6" id="text-4-3-2-3-2">
+<div class="org-src-container">
+
+<pre class="src src-python3">def render_page(request):
+	availableSkills =skillSet.objects.all()
+	skill_list=[]
+	for skill in availableSkills:
+		skill_list.append(skill.skillname)
+	pg = ProjectGiver.objects.get(account=request.user)
+	bids=Bid.objects.filter(project_poster=pg)
+	sortedBids=bids.order_by('project__Title')
+	print(sortedBids)
+	bidsMade=[]
+	for b in sortedBids:
+		bidsMade.append({'Title': b.project.Title, 'freelancer':b.freelancer.account.username,'amount':b.amount,'duration':b.duration,'budget':b.project.budget,'id':b.id})
+	past_projects = Project.objects.filter(proj_poster=pg,status='completed')
+	pastproj = []
+	for obj in past_projects:
+		innerdict = {'Title':obj.Title,'description':obj.description, 'id':obj.id}
+		pastproj.append(innerdict)
+	ongo_projects = Project.objects.filter(proj_poster=pg,status='ongoing')
+	ongoproj = []
+	for obj in ongo_projects:
+		innerdict = {'Title':obj.Title,'description':obj.description, 'id':obj.id}
+		ongoproj.append(innerdict)
+	dict = {'first_name':pg.first_name,'last_name':pg.last_name,'emailAddress':pg.emailAddress,
+			'rating':pg.rating,'profile_image':str(pg.profile_image),'username':pg.account.username,
+			'csrf_token':str(csrf(request)['csrf_token']),
+			'pastproj':pastproj,'ongoproj':ongoproj,'skills':skill_list,
+			'bids':bidsMade}
+	return JsonResponse(dict,safe=False)
+</pre>
+</div>
+</div>
+</li></ol>
+</li>
+<li><a id="sec-4-3-2-4" name="sec-4-3-2-4"></a>pj_edit_profile<br  /><ol class="org-ol"><li><a id="sec-4-3-2-4-1" name="sec-4-3-2-4-1"></a>Description<br  /><div class="outline-text-6" id="text-4-3-2-4-1">
+<p>
+The updated values for first_name, last_name, email are received from the front end and the values are updated in the backend
+</p>
+</div>
+</li>
+<li><a id="sec-4-3-2-4-2" name="sec-4-3-2-4-2"></a>Code Snippet<br  /><div class="outline-text-6" id="text-4-3-2-4-2">
+<div class="org-src-container">
+
+<pre class="src src-python3">def pj_edit_profile(request):
+	print("edit profile")
+	first_name = request.POST.get('fname',"")
+	last_name = request.POST.get('lname',"")
+	email = request.POST.get('email',"")
+	print("first name",first_name)
+	print("last name",last_name)
+	projectgiverobj = ProjectGiver.objects.get(account = request.user)
+	projectgiverobj.first_name = first_name
+	projectgiverobj.last_name = last_name
+	projectgiverobj.emailAddress = email
+	projectgiverobj.save()
+	return HttpResponseRedirect('/projectgiver')
+</pre>
+</div>
+</div>
+</li></ol>
+</li>
+<li><a id="sec-4-3-2-5" name="sec-4-3-2-5"></a>pj_edit_pic<br  /><ol class="org-ol"><li><a id="sec-4-3-2-5-1" name="sec-4-3-2-5-1"></a>Description<br  /><div class="outline-text-6" id="text-4-3-2-5-1">
+<p>
+The new file object for the profile image is retrieved. The image source in the backend is updated with the new value
+</p>
+</div>
+</li>
+<li><a id="sec-4-3-2-5-2" name="sec-4-3-2-5-2"></a>Code Snippet<br  /><div class="outline-text-6" id="text-4-3-2-5-2">
+<div class="org-src-container">
+
+<pre class="src src-python3">def pj_edit_pic(request):
+	profile_image_src = request.FILES['profile_image']
+	print(profile_image_src)
+	projectgiverobj = ProjectGiver.objects.get(account = request.user)
+	projectgiverobj.profile_image = profile_image_src
+	projectgiverobj.save()
+	return HttpResponseRedirect('/projectgiver')
+</pre>
+</div>
+</div>
+</li></ol>
+</li>
+<li><a id="sec-4-3-2-6" name="sec-4-3-2-6"></a>notification_project_poster<br  /><ol class="org-ol"><li><a id="sec-4-3-2-6-1" name="sec-4-3-2-6-1"></a>Description<br  /><div class="outline-text-6" id="text-4-3-2-6-1">
+<p>
+The project poster object is queried from the database based on the user logged in.
+The notifications are queried and filtered by the project poster object and whether the seen_status is 'unseen'
+A Json response of project poster name, freelaner name, project title, notification type is returned
+noti_type - 'available' : Bid Placed
+            'ongoing' : Project Assigned
+            'completed' : Project Completed
+</p>
+</div>
+</li>
+<li><a id="sec-4-3-2-6-2" name="sec-4-3-2-6-2"></a>Code Snippet<br  /><div class="outline-text-6" id="text-4-3-2-6-2">
+<div class="org-src-container">
+
+<pre class="src src-python3">def notification_project_poster(request):
+	project_poster = ProjectGiver.objects.filter(account=request.user)
+	noti_obj = Notification.objects.filter(project_poster=project_poster,seen_status='unseen')
+	noti_list = []
+	for obj in noti_obj:
+		innerdict = {'project_poster':obj.project_poster.first_name,'freelancer':obj.freelancer.first_name,'project':obj.project.Title,'noti_type':obj.project.status}
+		obj.seen_status = 'seen'
+		obj.save()
+		noti_list.append(innerdict)
+	dict = {'notification_list' : noti_list}
+	return JsonResponse(dict)
+</pre>
+</div>
+</div>
+</li></ol>
+</li>
+<li><a id="sec-4-3-2-7" name="sec-4-3-2-7"></a>click_notification<br  /><ol class="org-ol"><li><a id="sec-4-3-2-7-1" name="sec-4-3-2-7-1"></a>Description<br  /><div class="outline-text-6" id="text-4-3-2-7-1">
+<p>
+The function is triggered when project giver clicks his notifications.
+The notifications become marked as seen
+</p>
+</div>
+</li></ol>
+</li></ol>
+</div>
+</div>
+<div id="outline-container-sec-4-4" class="outline-3">
+<h3 id="sec-4-4"><span class="section-number-3">4.4</span> Projects</h3>
+<div class="outline-text-3" id="text-4-4">
+</div><div id="outline-container-sec-4-4-1" class="outline-4">
+<h4 id="sec-4-4-1"><span class="section-number-4">4.4.1</span> Database Model</h4>
+<div class="outline-text-4" id="text-4-4-1">
+</div><ol class="org-ol"><li><a id="sec-4-4-1-1" name="sec-4-4-1-1"></a>Database fields<br  /><div class="outline-text-5" id="text-4-4-1-1">
+<ul class="org-ul">
+<li><code>id (Primary key)</code> : Not mentioned but automatically added by django with auto-increment 
+</li>
+<li><code>Title</code> : Accepts characters to store the title name of the project
+</li>
+<li><code>proj_poster(Foreign Key</code>) : Refers to a particular project poster in the database
+</li>
+<li><code>freelancerAssigned</code> : Refers to a particular freelancer working on the project in the database
+</li>
+<li><code>description</code> : Accepts characters for a description about the project
+</li>
+<li><code>budget</code> : Accepts decimal values for the budget 
+</li>
+<li><code>status</code> : Accepts characters for checking the status of the project
+'available' : Project Unassigned
+'ongoing' : Project Assigned to a freelancer
+'completed' : Project Completed
+</li>
+<li><code>noBids</code> : Accepts integer values for the number of bids placed so far
+</li>
+<li><code>deadline</code> : Accepts a datefield for the deadline set for the project
+</li>
+</ul>
+</div>
+</li>
+<li><a id="sec-4-4-1-2" name="sec-4-4-1-2"></a>Code Snippet<br  /><div class="outline-text-5" id="text-4-4-1-2">
+<div class="org-src-container">
+
+<pre class="src src-python3">class Project(models.Model):
+	Title = models.CharField(max_length=50)
+	proj_poster = models.ForeignKey(ProjectGiver,on_delete=models.CASCADE)
+	freelancerAssigned = models.ForeignKey(Freelancer,on_delete=models.CASCADE,blank=True,null=True)
+	description = models.CharField(max_length=800)
+	budget = models.DecimalField(max_digits=10,decimal_places = 2)
+	status = models.CharField(max_length=50,default='available')
+	noBids = models.IntegerField(default=0)
+	deadline = models.DateField()
+	#availability = models.CharField(max_length=50,default='available')
+
+	def __str__(self):
+		return "Project Id:"+str(self.id)+ " name:"+self.Title
+</pre>
+</div>
+</div>
+</li></ol>
+</div>
+<div id="outline-container-sec-4-4-2" class="outline-4">
+<h4 id="sec-4-4-2"><span class="section-number-4">4.4.2</span> Controllers</h4>
+<div class="outline-text-4" id="text-4-4-2">
+</div><ol class="org-ol"><li><a id="sec-4-4-2-1" name="sec-4-4-2-1"></a>add_project<br  /><ol class="org-ol"><li><a id="sec-4-4-2-1-1" name="sec-4-4-2-1-1"></a>Description<br  /><div class="outline-text-6" id="text-4-4-2-1-1">
+<p>
+The function is triggered when a project poster adds a project
+The title, description, project poster, budget, deadline values are retrieved from the front end when a project poster adds a project.
+A project object is created based on these fields.
+The skills required for the project are retrieved from the front end.
+ProjectSkills object is created with the skills retrieved
+</p>
+</div>
+</li>
+<li><a id="sec-4-4-2-1-2" name="sec-4-4-2-1-2"></a>Code Snippet<br  /><div class="outline-text-6" id="text-4-4-2-1-2">
+<div class="org-src-container">
+
+<pre class="src src-python3">def add(request):
+    title=request.POST.get('Title','')
+    description=request.POST.get('description','')
+    pp = ProjectGiver.objects.get(account=request.user)
+    budget=request.POST.get('budget','')
+    deadline=request.POST.get('deadline','')
+    delim=deadline[2]
+    dl=deadline.split(delim)
+    dl.reverse()
+    dead='-'.join(dl)
+    x=Project.objects.create(Title=title,description=description,proj_poster=pp,budget=budget,deadline=dead,noBids=0)
+    proSkills=request.POST.getlist('project_skills[]')
+    skill_list=[]
+    print(proSkills)
+    for skill in proSkills:
+	a=skillSet.objects.get(skillname=skill)
+	ProjectSkills.objects.create(skill=a,projectid=x)
+    response=HttpResponse('Project ' + title + ' added')
+    return response
+</pre>
+</div>
+</div>
+</li></ol>
+</li>
+<li><a id="sec-4-4-2-2" name="sec-4-4-2-2"></a>project_done<br  /><ol class="org-ol"><li><a id="sec-4-4-2-2-1" name="sec-4-4-2-2-1"></a>Description<br  /><div class="outline-text-6" id="text-4-4-2-2-1">
+<p>
+This function is triggered when a project poster marks a project as completed
+The project_id is retrieved based on which the project object is queried from the database and the project poster status is changed to 'completed'
+The project giver is asked to give rating and the rating value is retrieved from the front end.
+Freelancer object is retrieved from the project object and the new rating for the freelancer is calculated based on the rating value received.
+new rating = ((old_rating * prev_completed_projects) + given_rating)/current_completed_projects
+</p>
+</div>
+</li>
+<li><a id="sec-4-4-2-2-2" name="sec-4-4-2-2-2"></a>Code Snippet<br  /><div class="outline-text-6" id="text-4-4-2-2-2">
+<div class="org-src-container">
+
+<pre class="src src-python3">#+BEGIN_SRC python3
+def project_done(request):
+    proj_id = request.POST.get('proj_id')
+    project = Project.objects.get(id=proj_id)
+    project.status='completed'
+    project.save()
+    rating = request.POST.get('rating')
+    proj_poster = project.proj_poster
+    freelancer = project.freelancerAssigned
+    freelancer_rating = freelancer.rating
+    freelancer_comp_projects = Project.objects.filter(freelancerAssigned=freelancer,status='completed').count()
+    freelancer_new_rating = ((freelancer_rating*(freelancer_comp_projects - 1)) + rating ) / freelancer_comp_projects
+    freelancer.rating = freelancer_new_rating
+    freelancer.save()
+    Notification.objects.create(project_poster=proj_poster,project=projectobj,freelancer=freelancer,project_status='completed')
+    return HttpResponse("SUCCESS")
+</pre>
+</div>
+</div>
+</li></ol>
+</li></ol>
+</div>
+</div>
+<div id="outline-container-sec-4-5" class="outline-3">
+<h3 id="sec-4-5"><span class="section-number-3">4.5</span> Bid</h3>
+<div class="outline-text-3" id="text-4-5">
+</div><div id="outline-container-sec-4-5-1" class="outline-4">
+<h4 id="sec-4-5-1"><span class="section-number-4">4.5.1</span> Database Model</h4>
+<div class="outline-text-4" id="text-4-5-1">
+</div><ol class="org-ol"><li><a id="sec-4-5-1-1" name="sec-4-5-1-1"></a>Database Fields<br  /><div class="outline-text-5" id="text-4-5-1-1">
+<ul class="org-ul">
+<li><code>id (Primary key)</code> : Not mentioned but automatically added by django with auto-increment 
+</li>
+<li><code>proj_poster(Foreign Key)</code> : Refers to a particular project poster in the database.
+</li>
+<li><code>freelancer</code> : Refers to a particular freelancer in the database.
+</li>
+<li><code>project(Foreign Key)</code> : Refers to a particular project in the database.
+</li>
+<li><code>amount</code> : Accepts a decimal field for the amount placed in the bid.
+</li>
+<li><code>duration</code> : Accepts a character field for the duration of the project
+</li>
+</ul>
+</div>
+</li>
+<li><a id="sec-4-5-1-2" name="sec-4-5-1-2"></a>Code Snippet<br  /><div class="outline-text-5" id="text-4-5-1-2">
+<div class="org-src-container">
+
+<pre class="src src-python3">class Bid(models.Model):
+    project_poster = models.ForeignKey(ProjectGiver, on_delete=models.CASCADE)
+    freelancer = models.ForeignKey(Freelancer, on_delete=models.CASCADE)
+    project = models.ForeignKey(Project, on_delete=models.CASCADE)
+    amount = models.DecimalField(max_digits=10, decimal_places=2)
+    duration = models.CharField(max_length=50)
+
+    def __str__(self):
+	return str(self.freelancer.account.username) + " " + str(self.project.Title)
+</pre>
+</div>
+</div>
+</li></ol>
+</div>
+<div id="outline-container-sec-4-5-2" class="outline-4">
+<h4 id="sec-4-5-2"><span class="section-number-4">4.5.2</span> Controllers</h4>
+<div class="outline-text-4" id="text-4-5-2">
+</div><ol class="org-ol"><li><a id="sec-4-5-2-0-1" name="sec-4-5-2-0-1"></a>add_bid<br  /></li>
+<li><a id="sec-4-5-2-1" name="sec-4-5-2-1"></a>Description<br  /><div class="outline-text-5" id="text-4-5-2-1">
+<p>
+The function is triggered when a freelancer adds a bid.
+The function queries a freelancer based on the user(freelancer) signed in. project_id is retrieved from the front end based on which the project object is queried and the project poster who had given
+the project is also retrieved. The amount and duration for which the freelancer would like to bid for is retreieved from the front end. A bid object is created with the fields.  A notification object
+is also created with the project_status as available to signify that the project has not been assigned to anyone. 
+</p>
+</div>
+</li>
+<li><a id="sec-4-5-2-2" name="sec-4-5-2-2"></a>Code Snippet<br  /><div class="outline-text-5" id="text-4-5-2-2">
+<div class="org-src-container">
+
+<pre class="src src-python3">def add_bid(request):
+    freelancer = Freelancer.objects.get(account=request.user)
+    project_id = request.POST.get('project_id', '')
+    project = Project.objects.get(id=project_id)
+    projectPoster = project.proj_poster
+    print(projectPoster)
+    amount = request.POST.get('amount', 0)
+    duration = request.POST.get('duration', '0')
+    Bid.objects.create(freelancer=freelancer, project=project,
+		       amount=amount, duration=duration, project_poster=projectPoster)
+    project.noBids += 1
+    project.save()
+    Notification.objects.create(project_poster=projectPoster, project=project,
+				freelancer=freelancer, project_status='available')
+    response = HttpResponse("Bid Created")
+    return response
+</pre>
+</div>
+</div>
+<ol class="org-ol"><li><a id="sec-4-5-2-2-1" name="sec-4-5-2-2-1"></a>accept_bid<br  /></li></ol>
+</li>
+<li><a id="sec-4-5-2-3" name="sec-4-5-2-3"></a>Description<br  /><div class="outline-text-5" id="text-4-5-2-3">
+<p>
+The function is triggered when a bid is accepted by a project giver.
+The bid_id is retrieved from the front end based on which the bid_obj is retrieved. The project status is changed to 'ongoing' to signify that the project has been assigned to a
+freelancer and the project is no more available for bids. The old bids for the project all are deleted.
+Notification object is created with project_status as 'unseen' which is to congratulate the freelancer that his bid has been accepted. 
+</p>
+</div>
+</li>
+<li><a id="sec-4-5-2-4" name="sec-4-5-2-4"></a>Code Snippet<br  /><div class="outline-text-5" id="text-4-5-2-4">
+<div class="org-src-container">
+
+<pre class="src src-python3">def accept_bid(request):
+    bid_id = request.POST.get('bid_id')
+    bid_obj = Bid.objects.get(id=bid_id)
+    freelancerobj = bid_obj.freelancer
+    proj_poster = bid_obj.project_poster
+    projectobj = bid_obj.project
+    projectobj.freelancerAssigned = freelancerobj
+    projectobj.status = 'ongoing'
+    projectobj.save()
+    oldbids = Bid.objects.filter(project=projectobj).delete()
+    obj = Notification.objects.create(project_poster=proj_poster, project=projectobj,
+				      freelancer=freelancerobj, project_status='ongoing', seen_status='unseen')
+    print("seen_status is " + obj.seen_status)
+    return HttpResponse("SUCCESS")
+</pre>
+</div>
+</div>
+</li></ol>
+</div>
+</div>
+<div id="outline-container-sec-4-6" class="outline-3">
+<h3 id="sec-4-6"><span class="section-number-3">4.6</span> projectskills</h3>
+<div class="outline-text-3" id="text-4-6">
+</div><div id="outline-container-sec-4-6-1" class="outline-4">
+<h4 id="sec-4-6-1"><span class="section-number-4">4.6.1</span> Database Model</h4>
+<div class="outline-text-4" id="text-4-6-1">
+</div><ol class="org-ol"><li><a id="sec-4-6-1-1" name="sec-4-6-1-1"></a>Database Fields<br  /><div class="outline-text-5" id="text-4-6-1-1">
+<ul class="org-ul">
+<li><code>id (Primary key)</code> : Not mentioned but automatically added by django with auto-increment
+</li>
+<li><code>skill (Foreign Key)</code> : Refers to a particular skill in the skillSet database
+</li>
+<li><code>projectid (Foreign Key)</code> : Refers to particular project id in the project database
+</li>
+</ul>
+</div>
+</li>
+<li><a id="sec-4-6-1-2" name="sec-4-6-1-2"></a>Code Snipet<br  /><div class="outline-text-5" id="text-4-6-1-2">
+<div class="org-src-container">
+
+<pre class="src src-python3">class ProjectSkills(models.Model):
+    skill = models.ForeignKey(skillSet, on_delete=models.CASCADE)
+    projectid = models.ForeignKey(Project, on_delete=models.CASCADE)
+
+    def __str__(self):
+	return "skillname:" + str(self.skill.skillname) + " " + str(self.projectid.Title)
+</pre>
+</div>
+</div>
+</li></ol>
+</div>
+</div>
+<div id="outline-container-sec-4-7" class="outline-3">
+<h3 id="sec-4-7"><span class="section-number-3">4.7</span> freelancerskills</h3>
+<div class="outline-text-3" id="text-4-7">
+</div><div id="outline-container-sec-4-7-1" class="outline-4">
+<h4 id="sec-4-7-1"><span class="section-number-4">4.7.1</span> Database Model</h4>
+<div class="outline-text-4" id="text-4-7-1">
+</div><ol class="org-ol"><li><a id="sec-4-7-1-1" name="sec-4-7-1-1"></a>Database Fields<br  /><div class="outline-text-5" id="text-4-7-1-1">
+<ul class="org-ul">
+<li>id (Primary key) : Not mentioned but automatically added by django with auto-increment
+</li>
+<li>skillname : Accepts a character field for the skillname in the database
+</li>
+<li>freelancer: Refers to a particular freelancer in the database
+</li>
+</ul>
+</div>
+</li>
+<li><a id="sec-4-7-1-2" name="sec-4-7-1-2"></a>Code Snippet<br  /><div class="outline-text-5" id="text-4-7-1-2">
+<div class="org-src-container">
+
+<pre class="src src-python3">class FreelancerSkills(models.Model):
+    skillname = models.CharField(max_length=50)
+    freelancer = models.ForeignKey(Freelancer, on_delete=models.CASCADE)
+
+    def __str__(self):
+	return "skillname:" + str(self.skillname) + " " + str(self.freelancer)
+</pre>
+</div>
+</div>
+</li>
+<li><a id="sec-4-7-1-3" name="sec-4-7-1-3"></a>Database Fields<br  /><div class="outline-text-5" id="text-4-7-1-3">
+<ul class="org-ul">
+<li><code>id (Primary key)</code> : Not mentioned but automatically added by django with auto-increment
+</li>
+<li><code>skillname</code> : Accepts a character field for the skillname in the database
+</li>
+<li><code>freelancer</code>: Refers to a particular freelancer in the database
+</li>
+</ul>
+</div>
+</li></ol>
+</div>
+</div>
+<div id="outline-container-sec-4-8" class="outline-3">
+<h3 id="sec-4-8"><span class="section-number-3">4.8</span> skillSet</h3>
+<div class="outline-text-3" id="text-4-8">
+</div><div id="outline-container-sec-4-8-1" class="outline-4">
+<h4 id="sec-4-8-1"><span class="section-number-4">4.8.1</span> Database Model</h4>
+<div class="outline-text-4" id="text-4-8-1">
+</div><ol class="org-ol"><li><a id="sec-4-8-1-1" name="sec-4-8-1-1"></a>Database Fields<br  /><div class="outline-text-5" id="text-4-8-1-1">
+<ul class="org-ul">
+<li><code>id (Primary key)</code> : Not mentioned but automatically added by django with auto-increment
+</li>
+<li><code>skillname</code> : Accepts a character field for skill name in the database
+</li>
+</ul>
+</div>
+</li>
+<li><a id="sec-4-8-1-2" name="sec-4-8-1-2"></a>Code Snippet<br  /><div class="outline-text-5" id="text-4-8-1-2">
+<div class="org-src-container">
+
+<pre class="src src-python3">class skillSet(models.Model):
+    skillname = models.CharField(max_length=50)
+
+    def __str__(self):
+	return "Skill:" + str(self.skillname)
+</pre>
+</div>
+</div>
+</li></ol>
+</div>
+</div>
+<div id="outline-container-sec-4-9" class="outline-3">
+<h3 id="sec-4-9"><span class="section-number-3">4.9</span> notifications</h3>
+<div class="outline-text-3" id="text-4-9">
+</div><div id="outline-container-sec-4-9-1" class="outline-4">
+<h4 id="sec-4-9-1"><span class="section-number-4">4.9.1</span> Database Model</h4>
+<div class="outline-text-4" id="text-4-9-1">
+</div><ol class="org-ol"><li><a id="sec-4-9-1-1" name="sec-4-9-1-1"></a>Database Fields<br  /><div class="outline-text-5" id="text-4-9-1-1">
+<ul class="org-ul">
+<li><code>id (Primary key)</code> : Not mentioned but automatically added by django with auto-increment
+</li>
+<li><code>project_poster (Foreign Key)</code> : Refers to a particular project poster in the database.
+</li>
+<li><code>freelancer</code> : Refers to a particular freelancer in the database.
+</li>
+<li><code>project(Foreign Key)</code> : Refers to a particular project in the database.
+</li>
+<li><code>project_Status</code> : Accepts a character field for the status of the project.
+</li>
+<li><code>seen_status</code> : Accepts a character field for the seen_status.
+</li>
+</ul>
+</div>
+</li>
+<li><a id="sec-4-9-1-2" name="sec-4-9-1-2"></a>Code Snippet<br  /><div class="outline-text-5" id="text-4-9-1-2">
+<div class="org-src-container">
+
+<pre class="src src-python3">class Notification(models.Model):
+    project_poster = models.ForeignKey(ProjectGiver, on_delete=models.CASCADE)
+    freelancer = models.ForeignKey(Freelancer, on_delete=models.CASCADE)
+    project = models.ForeignKey(Project, on_delete=models.CASCADE)
+    project_status = models.CharField(max_length=50, default="Ongoing")
+    seen_status = models.CharField(max_length=50, default="unseen")
+
+    def __str__(self):
+	return str(self.project_poster.account.username) + " " + str(self.project.Title)
+</pre>
+</div>
+</div>
+</li></ol>
+</div>
+</div>
+<div id="outline-container-sec-4-10" class="outline-3">
+<h3 id="sec-4-10"><span class="section-number-3">4.10</span> otp</h3>
+<div class="outline-text-3" id="text-4-10">
+</div><div id="outline-container-sec-4-10-1" class="outline-4">
+<h4 id="sec-4-10-1"><span class="section-number-4">4.10.1</span> Database Model</h4>
+<div class="outline-text-4" id="text-4-10-1">
+</div><ol class="org-ol"><li><a id="sec-4-10-1-1" name="sec-4-10-1-1"></a>Database Fields<br  /><div class="outline-text-5" id="text-4-10-1-1">
+<ul class="org-ul">
+<li><code>id (Primary key)</code> : Not mentioned but automatically added by django with auto-increment
+</li>
+<li><code>otp</code> : Accpets an integer field for the otp
+</li>
+<li><code>email</code> : Accepts a character field for the email address
+</li>
+</ul>
+</div>
+</li>
+<li><a id="sec-4-10-1-2" name="sec-4-10-1-2"></a>Code Snippet<br  /><div class="outline-text-5" id="text-4-10-1-2">
+<div class="org-src-container">
+
+<pre class="src src-python3">class OTP(models.Model):
+    otp = models.IntegerField()
+    email = models.CharField(max_length=255)
+
+    def __str__(self):
+	return str(self.email) + ": " + str(self.otp)
+</pre>
+</div>
+</div>
+</li>
+<li><a id="sec-4-10-1-3" name="sec-4-10-1-3"></a>Database Fields<br  /><div class="outline-text-5" id="text-4-10-1-3">
+<ul class="org-ul">
+<li><code>id (Primary key)</code> : Not mentioned but automatically added by django with auto-increment
+</li>
+<li><code>otp</code> : Accpets an integer field for the otp
+</li>
+<li><code>email</code> : Accepts a character field for the email address
+</li>
+</ul>
+</div>
+</li></ol>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> Frontend model</h2>
+<div class="outline-text-2" id="text-5">
+</div><div id="outline-container-sec-5-1" class="outline-3">
+<h3 id="sec-5-1"><span class="section-number-3">5.1</span> JAVA-SCRIPT Files</h3>
+<div class="outline-text-3" id="text-5-1">
+</div><ol class="org-ol"><li><a id="sec-5-1-0-1" name="sec-5-1-0-1"></a>Entry.js<br  /><ol class="org-ol"><li><a id="sec-5-1-0-1-1" name="sec-5-1-0-1-1"></a>addSkills<br  /><div class="outline-text-6" id="text-5-1-0-1-1">
+<ul class="org-ul">
+<li>Description:
+</li>
+</ul>
+<p>
+Function to create a safe object to return the skill using
+a safe funtion.
+</p>
+<ul class="org-ul">
+<li>Code-snippet:
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-js">var addSkills=function(skill)
+{
+    this.getSkillName=function()
+    {
+	return skill;
+    }
+}
+</pre>
+</div>
+</div>
+</li>
+<li><a id="sec-5-1-0-1-2" name="sec-5-1-0-1-2"></a>remover<br  /><div class="outline-text-6" id="text-5-1-0-1-2">
+<ul class="org-ul">
+<li>Description:
+</li>
+</ul>
+<p>
+This function is used to give a heading to each basic div of the
+user page. Moreover,it performs the crucial task of changing the class
+active for the navigation bar and also the current div which is not
+hidden is changed on button-click.
+</p>
+<ul class="org-ul">
+<li>Code-snippet
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-js">function remover(str){
+    $('.active').removeClass('active')
+    $('.common').addClass('hidden')
+    clas = '\.' + str
+    clasdiv = clas + 'div'
+    // console.log(clas)
+    $(clas).addClass('active');
+    $(clasdiv).removeClass('hidden');
+    str=str.split(/(?=[A-Z])/);
+    str=str.join(" ");
+    // console.log(str);
+    $('#fill').text(str)
+}
+</pre>
+</div>
+</div>
+</li>
+<li><a id="sec-5-1-0-1-3" name="sec-5-1-0-1-3"></a>makeFreelancer<br  /><div class="outline-text-6" id="text-5-1-0-1-3">
+<ul class="org-ul">
+<li>Description:
+</li>
+</ul>
+<p>
+Make freelancer function is used to construct a safe object of the data
+quired by the render-page. We construct a safe-object named freelancer
+and assign it with varius necessary functions using this function.
+</p>
+<ul class="org-ul">
+<li>Code-snippet
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-js">var makeFreelancer = function(response){
+    var csrftoken = response['csrf_token'];
+    var f_name = response['first_name'];
+    var l_name = response['last_name'];
+    var email = response['emailAddress'];
+    var rating = response['rating'];
+    var ongo_projects = response['ongo_proj_list'];
+    var comp_projects = response['compl_proj_list'];
+    var profile_image = response['profile_image'];
+    var bids = response['bids'];
+    var username = response['username'];
+    var skills = response['freelancer_skill'];
+
+
+    var freelancer = {};
+    function getF_name(){
+	return f_name;
+    }
+    function getL_name(){
+	return l_name;
+    }
+    function getCsrf(){
+	return csrftoken;
+    }
+    function getEmail(){
+	return email;
+    }
+    function getImagePath(){
+
+	return profile_image;
+    }
+    function getRating(){
+	return rating;
+    }
+    function getOngo_projects(){
+	return ongo_projects;
+    }
+    function getComp_projects(){
+	return comp_projects;
+    }
+    function getUsername(){
+	return username;
+    }
+
+    function getCurrentBid(){
+	return bids;
+    }
+    function getSkills(){
+	return skills
+
+    }
+    freelancer.getF_name = getF_name;
+    freelancer.getL_name = getL_name;
+    freelancer.getCsrf = getCsrf;
+    freelancer.getEmail = getEmail;
+    freelancer.getRating = getRating;
+    freelancer.getOngo_projects = getOngo_projects;
+    freelancer.getComp_projects= getComp_projects;
+    freelancer.getSkills = getSkills;
+    freelancer.getUsername = getUsername;
+    freelancer.getImagePath = getImagePath;
+    freelancer.getCurrentBid = getCurrentBid;
+    return freelancer
+ }
+</pre>
+</div>
+</div>
+</li>
+<li><a id="sec-5-1-0-1-4" name="sec-5-1-0-1-4"></a>populateUserPage<br  /><div class="outline-text-6" id="text-5-1-0-1-4">
+<ul class="org-ul">
+<li>Description:
+</li>
+</ul>
+<p>
+&#x2013; popoulateUserPage function makes an ajax call to renderpage to retrieve
+a JSON object from the backend.
+&#x2013; Then this Json object is further converted into a safe object.Then the
+functions of this safe object are used to populate the User-Page with
+the required fields and tables.
+&#x2013; All the tables and divs are filled using the retrieved data
+&#x2013; It is called on load
+</p>
+<ul class="org-ul">
+<li>Code-snippet
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-js"> var populateUserPage = function(){
+    $.ajax({
+	url : 'renderpage',
+	method : 'GET',
+	success: function(response){
+	    // console.log("lalalsuccess")
+	    // console.log(response)
+	    for( skill in response['skills'])
+	    {
+		skills.push(new addSkills(response['skills'][skill]));
+	    }
+	    var skillstr="";
+	    freelancer_skill_list = []
+	    for (skill in response['freelancer_skill'])
+	    {
+		console.log(skill)
+		freelancer_skill_list.push(response['freelancer_skill'][skill]['name']);
+	    }
+	    console.log(freelancer_skill_list[1])
+	    for(skill in skills)
+	    {
+		if (freelancer_skill_list.indexOf(skills[skill].getSkillName()) != -1)
+		    skillstr+="&lt;div class=\"checkbox\"&gt;&lt;label&gt;&lt;input type=Checkbox name=skill value="+skills[skill].getSkillName()+" disabled=true checked=checked &gt;"+skills[skill].getSkillName()+"&lt;/label&gt;&lt;/div&gt;";
+		else    
+		    skillstr+="&lt;div class=\"checkbox\"&gt;&lt;label&gt;&lt;input type=Checkbox name=skill value="+skills[skill].getSkillName()+"&gt;"+skills[skill].getSkillName()+"&lt;/label&gt;&lt;/div&gt;";
+	    }
+	    $('#skillsBody').html(skillstr);
+	    freelancer = makeFreelancer(response);
+	    var str = ''
+	    var str = freelancer.getF_name() + ' ' + freelancer.getL_name();
+	    var path=freelancer.getImagePath();
+	    // path=path.split('/').slice(1).join('/');
+	    console.log(freelancer.getF_name());
+	    $('#f-l-name').text(str);
+	    $('.e-id').text("  "+freelancer.getEmail());
+	    $('#head4').text(str);
+	    $(".profile_pic").attr("src",'/' + path);
+	    $('.usen').text("  "+ freelancer.getUsername());
+	    $('.stars').attr('data-rating',freelancer.getRating());
+	    var table = '';
+	    for (project in freelancer.getOngo_projects()){
+		var curr=freelancer.getOngo_projects()[project]
+		table+='&lt;tr&gt;';
+		table=table + '&lt;td&gt;' + curr['Title'] + '&lt;/td&gt;'
+		table=table + '&lt;td&gt;' + curr['description'] + '&lt;/td&gt;'
+		table+='&lt;/tr&gt;';
+
+	    }
+	    $('#Ongotable').html(table);
+	    var table = '';
+	    for (project in freelancer.getComp_projects()){
+		var curr=freelancer.getComp_projects()[project]
+		table+='&lt;tr&gt;';
+		table=table + '&lt;td&gt;' + curr['Title'] + '&lt;/td&gt;';
+		table=table + '&lt;td&gt;' + curr['description'] + '&lt;/td&gt;';
+		table=table + '&lt;td&gt;' + '&lt;div class=\"container-fluid\"&gt;&lt;div class=\"row lead\"&gt;';
+		if(curr['projectPosterRating']!='0'){
+		    console.log("true")
+		    table+= '&lt;div id=\"' + curr['id'] + '\" class=\"hearts\"&gt;'
+			for(i=0;i&lt;curr['projectPosterRating'];i++){
+			    table += '&lt;span class=\"glyphicon .glyphicon-star-empty glyphicon-star\"&gt;&lt;/span&gt;';
+			}
+			for(i=0;i&lt;5-curr['projectPosterRating'];i++){
+			    table += '&lt;span class=\"glyphicon .glyphicon-star-empty glyphicon-star-empty\"&gt;&lt;/span&gt;';
+			}
+		    table=table + '&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;';
+		}
+		else{
+		    var i= curr['id'];
+		    i = i.toString();
+		    rate[i] = 0; 
+		    table+= '&lt;div id=\"' + curr['id'] + '\" class=\"hearts starrr\"';
+		    table=table + '&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;';
+		  table=table + '&lt;button onclick=giverating(\"' +curr['id']+ 'button\") type=\"button\" class=\"btn btn-success\"&gt;Give Rating&lt;/button&gt;';
+		}
+		table+='&lt;/td&gt;';
+		table+='&lt;/tr&gt;';
+
+	      }
+      $('#compTable').html(table);
+      var table = '';
+      console.log(freelancer.getSkills()[0])
+      for(skill in freelancer.getSkills()){
+	table+='&lt;tr&gt;';
+		table=table+ '&lt;td style=\'text-align:center\'&gt;&lt;button class=\'btn btn-danger\'&gt;&lt;span class=\'fa fa-trash\'&gt;&lt;/span&gt;&lt;/button&gt;&lt;/td&gt;'
+	table=table + '&lt;td&gt;' + freelancer.getSkills()[skill]['name'] + '&lt;/td&gt;'
+		table+='&lt;/tr&gt;'
+	    }
+	    $('#skillTable').html(table);
+	    currbids = freelancer.getCurrentBid();
+	    var table = '';
+	    for(bids in currbids){
+		table+='&lt;tr&gt;';
+		table=table + '&lt;td&gt;' + currbids[bids]['Title'] + '&lt;/td&gt;'
+		table=table + '&lt;td&gt;' + currbids[bids]['projectgiver'] + '&lt;/td&gt;'
+		table=table + '&lt;td&gt;' + '$ '+ currbids[bids]['amount'] + '&lt;/td&gt;'
+		table=table + '&lt;td&gt;' + currbids[bids]['duration'] + ' days' + '&lt;/td&gt;'
+		table+='&lt;/tr&gt;';
+	    }
+	    // console.log(table)
+	    $('#bidsTable').html(table);
+	    var rating=freelancer.getRating();
+	    rating=parseFloat(rating);
+	    var numStars = 5;
+	    console.log(rating);
+	    console.log(Math.floor(rating + 1))
+	    var fullStar = new Array(Math.floor(rating + 1)).join('&lt;i class="glyphicon glyphicon-star"&gt;&lt;/i&gt;');
+	    var halfStar = ((rating%1) !== 0) ? '&lt;i class="glyphicon glyphicon-star half"&gt;&lt;/i&gt;': '';
+
+	    var noStar = new Array(Math.floor(numStars + 1 - rating)).join('&lt;i class="glyphicon glyphicon-star-empty"&gt;&lt;/i&gt;');
+
+	    $('#stars').html(fullStar + halfStar + noStar);
+	    $('#rating').text(rating+'/'+numStars);
+	    $('#csrf').val(freelancer.getCsrf());
+
+    $('input[name="fname"]').attr('value',freelancer.getF_name());
+    $('input[name="lname"]').attr('value',freelancer.getL_name());
+    $('input[name="email"]').attr('value',freelancer.getEmail());
+    starcreator();
+
+},
+error : function(xhr,display,eThrow){
+    console.log("error");
+    return display;
+}
+});
+ }
+</pre>
+</div>
+</div>
+</li>
+<li><a id="sec-5-1-0-1-5" name="sec-5-1-0-1-5"></a>giverating<br  /><div class="outline-text-6" id="text-5-1-0-1-5">
+<ul class="org-ul">
+<li>Description:
+</li>
+</ul>
+<p>
+giverating function makes an ajax call to the url 'rating'.It gets 
+the project id using the onclick function parameter and fetches the
+rating given to the particular project using a smartly mantained 
+dictionary.Then these are sent thrugh 'POST' to the given url.
+</p>
+<ul class="org-ul">
+<li>Code-snippet
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-js">var giverating = function(id){
+  console.log("hello");
+  var str = id;
+  str = str.substr(0,str.length-6);
+  console.log(str)
+  var rati = rate[str];
+  if(rati=='0'){
+    alert("please give some rating");
+    return null;
+  } 
+  $.ajax({
+    url: 'rating',
+    method: 'POST',
+    data: {
+      'csrfmiddlewaretoken' : freelancer.getCsrf(),
+      'rating' : rati,
+      'project_id' : str,
+    },
+    success: function(response){
+      window.location = '/freelancer';
+    },
+    error: function(xhr,display,eThrow){
+      console.log('error')
+    },
+  });
+}
+</pre>
+</div>
+</div>
+</li>
+<li><a id="sec-5-1-0-1-6" name="sec-5-1-0-1-6"></a>makeId<br  /><div class="outline-text-6" id="text-5-1-0-1-6">
+<ul class="org-ul">
+<li>Description:
+</li>
+</ul>
+<p>
+makeId function generates a safeobject named pid using which we can
+fetch the id using the defined function 'getId'.
+</p>
+<ul class="org-ul">
+<li>Code-snippet
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-js">var makeId = function(id){
+    var pid ={};
+    var getId = function(){
+	return id;
+    }
+    pid.getId = getId;
+    return pid;
+}
+</pre>
+</div>
+</div>
+</li>
+<li><a id="sec-5-1-0-1-7" name="sec-5-1-0-1-7"></a>saveId<br  /><div class="outline-text-6" id="text-5-1-0-1-7">
+<ul class="org-ul">
+<li>Description:
+</li>
+</ul>
+<p>
+On function call it gets an id from the button which is actually the
+project-id.Then this project-id is sent to the backend on appropriate 
+button-click to signify the completion of the given project
+</p>
+<ul class="org-ul">
+<li>Code-snippet
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-js">var saveId = function(id){
+    pid = makeId(id);
+    $.ajax({
+	url: 'completed',
+	method: 'POST',
+	data: {
+	    'csrfmiddlewaretoken' : freelancer.getCsrf(),
+	    'proj_id' : pid.getId(),
+	},
+	success : function(response){
+	    location.reload();
+	},
+	error: function(xhr, display, eThrow) {
+	    console.log("error");
+	    return display;
+	},
+    });
+}
+</pre>
+</div>
+</div>
+</li>
+<li><a id="sec-5-1-0-1-8" name="sec-5-1-0-1-8"></a>makeEditedUser<br  /><div class="outline-text-6" id="text-5-1-0-1-8">
+<ul class="org-ul">
+<li>Description:
+</li>
+</ul>
+
+<p>
+makeEditedUser function is used to validate the input fields given
+to the edit-user page.It does various kinds of validations on the input
+and allows the editer function to be called only if all the validations
+are passed for 'first-name' , 'last-name' &amp; 'email'. 
+</p>
+<ul class="org-ul">
+<li>Code-snippet
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-js">var makeEditedUser = function(){
+    // console.log('dfd')
+    firstname = $('input[name="fname"]').val();
+    lastname = $('input[name="lname"]').val();
+    email = $('input[name="email"]').val();
+    if((/^[a-zA-Z ]+$/.test(firstname)==false))
+    {
+	alert("Check firstname");
+	return null;
+    }
+    if((/^[a-zA-Z ]+$/.test(lastname)==false))
+    {
+	alert("Check lastname");
+	return null;
+    }
+    if((/^(([^&lt;&gt;()\[\]\\.,;:\s@"]+(\.[^&lt;&gt;()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)==false))
+    {
+
+	$('#checkEmail').removeClass('hidden');
+    return null;
+    }
+    console.log(firstname);
+    editer(firstname,lastname,email);
+ }
+</pre>
+</div>
+</div>
+</li>
+<li><a id="sec-5-1-0-1-9" name="sec-5-1-0-1-9"></a>editer<br  /><div class="outline-text-6" id="text-5-1-0-1-9">
+<ul class="org-ul">
+<li>Description:
+</li>
+</ul>
+<p>
+editer function is used to send an ajax request to the url editprofile
+It sends request to editprofile route to edit the current fields of the
+freelancer.
+</p>
+<ul class="org-ul">
+<li>Code-snippet:
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-js">function editer(firstname,lastname,email){
+    $.ajax({
+	url: 'editprofile',
+	method: 'POST',
+	data : {
+	    'csrfmiddlewaretoken' : freelancer.getCsrf(),
+	    'fname' : firstname,
+	    'lname' : lastname,
+	    'email' : email,
+	},
+	success: function(response){
+	    window.location='/freelancer'
+	},
+	error: function(xhr,display,eThrow){
+	    console.log(display);
+	}
+    });
+ }
+</pre>
+</div>
+</div>
+</li>
+<li><a id="sec-5-1-0-1-10" name="sec-5-1-0-1-10"></a>notificationMaker<br  /><div class="outline-text-6" id="text-5-1-0-1-10">
+<ul class="org-ul">
+<li>Description:
+</li>
+</ul>
+<p>
+This function creates a safe object for the notifications recieved
+from the backend and attaches functions to the safe-object so formed 
+for further use
+</p>
+<ul class="org-ul">
+<li>Code-snippet
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-js">var notificationMaker=function(notification)
+{
+    var projectName=notification['project'];
+    var projectGiver=notification['project_poster'];
+    var notificationType=notification['noti_type'];
+    var notificationId=notification['notification_id'];
+    console.log(projectName);
+    this.getProjectName=function()
+    {
+	return projectName; 
+    }
+    this.getProjectGiver=function()
+    {
+	return projectGiver;
+    }
+    this.getType=function()
+    {
+      return notificationType;
+    }
+    this.getId=function()
+    {
+      return notificationId;
+    }
+
+}
+</pre>
+</div>
+</div>
+</li>
+<li><a id="sec-5-1-0-1-11" name="sec-5-1-0-1-11"></a>makeNotifications<br  /><div class="outline-text-6" id="text-5-1-0-1-11">
+<ul class="org-ul">
+<li>Description:
+</li>
+</ul>
+<p>
+makeNotifications function makes an ajax call to url notifications
+and fetches the notifications using 'GET'.It then populates the 
+notification icon in the navbar which onclick shows the required 
+notification.
+</p>
+<ul class="org-ul">
+<li>Code-snippet
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-js">var makeNotifications=function()
+{
+    notification.length=0;
+    $.ajax({
+	url:'notifications',
+	method:'GET',
+	success:function(response)
+	{
+	    test=response;
+	    console.log(response);
+	    for (i in response['notification_list'])
+	    {
+		console.log(i);
+		notification.push(new notificationMaker(response['notification_list'][i]));
+	    }
+	    var str="&lt;a href=\"#\" class=\"icon-info\" data-toggle=\"dropdown\" onclick=\"notificationRemover()\"&gt;&lt;span class=\"glyphicon glyphicon-bell\" aria-hidden=\"true\"&gt;&lt;/span&gt;\""+
+		    "&lt;span class=\"label label-primary\" id=\"notification\"&gt;"+notification.length+"&lt;/span&gt;&lt;/a&gt;&lt;ul class=\"dropdown-menu notiff\"&gt;&lt;li&gt;"
+	    for(currentNotfications in notification)
+	    {
+		if(notification[currentNotfications].getType()=="ongoing")
+		{
+		  str+="&lt;div class=\"navbar-content\"&gt;"+
+		  "&lt;a class=\"text-muted small\" class=\"e-id\" onclick=\"remover('OngoingProjects')\"&gt;"+"Congratulations! Your Bid for "+notification[currentNotfications].getProjectName()+" has been accepted"+ "&lt;/a&gt;"+
+		  "&lt;/div&gt;&lt;div class=\"divider\"&gt;&lt;/div&gt;";
+		}
+		else
+		{
+		  str+="&lt;div class=\"navbar-content\"&gt;"+
+		  "&lt;a class=\"text-muted small\" class=\"e-id\" onclick=\"remover('CompletedProjects')\"&gt;"+"Congratulations! You have successfully completed "+notification[currentNotfications].getProjectName()+"&lt;/a&gt;"+
+		  "&lt;/div&gt;&lt;div class=\"divider\"&gt;&lt;/div&gt;";
+
+		}
+	    }
+	    str+="&lt;/li&gt;&lt;/ul&gt;    "
+	    $('#viewNotification').html(str);
+	},
+	error:function(response)
+	{
+	    alert(response.responseText)
+	}
+    });
+
+}
+</pre>
+</div>
+</div>
+</li>
+<li><a id="sec-5-1-0-1-12" name="sec-5-1-0-1-12"></a>notificationRemover<br  /><div class="outline-text-6" id="text-5-1-0-1-12">
+<ul class="org-ul">
+<li>Description:
+</li>
+</ul>
+<p>
+NotificationRemover function is used to remove the seen notifications 
+sent to url using a seanarr parameter using an ajax request.
+</p>
+<ul class="org-ul">
+<li>Code-snippet
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-js">var notificationRemover=function()
+{
+  seenarr=[];
+  for(notis in notification)
+  {
+    seenarr.push(notification[notis].getId())  
+  }
+  console.log(seenarr)
+  $.ajax({
+    url:'clicknotification',
+    method:'POST',
+    data:{
+	  'csrfmiddlewaretoken' : freelancer.getCsrf(),
+	  'seenarr' : seenarr,
+    },
+    success: function(response)
+    {
+      console.log(response);
+    },
+    error:function(response)
+    {
+      console.log(response.responseText);
+    }
+
+
+  });
+
+}
+</pre>
+</div>
+</div>
+</li>
+<li><a id="sec-5-1-0-1-13" name="sec-5-1-0-1-13"></a>setInterval<br  /><div class="outline-text-6" id="text-5-1-0-1-13">
+<ul class="org-ul">
+<li>Description:
+</li>
+</ul>
+<p>
+It keeps on being called after every period of a defined interval in
+the function
+</p>
+<ul class="org-ul">
+<li>Code-snippet
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-js">setInterval(function() {
+    populateUserPage();
+    makeNotifications();
+  // This will be executed every 5 seconds
+}, 15000);
+</pre>
+</div>
+</div>
+</li>
+<li><a id="sec-5-1-0-1-14" name="sec-5-1-0-1-14"></a>starcreator<br  /><div class="outline-text-6" id="text-5-1-0-1-14">
+<ul class="org-ul">
+<li>Description:
+</li>
+</ul>
+<p>
+starcreator is a function which is used to create the stars which are
+visible in the completedProjects Table.
+The star creator assigns various properties to the stars thus created
+like the property of being changed on hover and of retaing the aquired
+rating on a rating star being selected.
+The last part of this code snippet is used to get the rating assigned
+and use it as a value for a key in the dictionary which is later used
+to pass requests to a url using ajax
+</p>
+<ul class="org-ul">
+<li>Code-snippet
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-js">var starcreator = function()
+{
+
+(function($, window) {
+  var Starrr;
+
+  Starrr = (function() {
+    Starrr.prototype.defaults = {
+      rating: void 0,
+      numStars: 5,
+      change: function(e, value) {}
+    };
+
+    function Starrr($el, options) {
+      var i, _, _ref,
+	_this = this;
+
+      this.options = $.extend({}, this.defaults, options);
+      this.$el = $el;
+      _ref = this.defaults;
+      for (i in _ref) {
+	_ = _ref[i];
+	if (this.$el.data(i) != null) {
+	  this.options[i] = this.$el.data(i);
+	}
+      }
+      this.createStars();
+      this.syncRating();
+      this.$el.on('mouseover.starrr', 'span', function(e) {
+	return _this.syncRating(_this.$el.find('span').index(e.currentTarget) + 1);
+      });
+      this.$el.on('mouseout.starrr', function() {
+	return _this.syncRating();
+      });
+      this.$el.on('click.starrr', 'span', function(e) {
+	return _this.setRating(_this.$el.find('span').index(e.currentTarget) + 1);
+      });
+      this.$el.on('starrr:change', this.options.change);
+    }
+
+    Starrr.prototype.createStars = function() {
+      var _i, _ref, _results;
+
+      _results = [];
+      for (_i = 1, _ref = this.options.numStars; 1 &lt;= _ref ? _i &lt;= _ref : _i &gt;= _ref; 1 &lt;= _ref ? _i++ : _i--) {
+	_results.push(this.$el.append("&lt;span class='glyphicon .glyphicon-star-empty'&gt;&lt;/span&gt;"));
+      }
+      return _results;
+    };
+
+    Starrr.prototype.setRating = function(rating) {
+      if (this.options.rating === rating) {
+	rating = void 0;
+      }
+      this.options.rating = rating;
+      this.syncRating();
+      return this.$el.trigger('starrr:change', rating);
+    };
+
+    Starrr.prototype.syncRating = function(rating) {
+      var i, _i, _j, _ref;
+
+      rating || (rating = this.options.rating);
+      if (rating) {
+	for (i = _i = 0, _ref = rating - 1; 0 &lt;= _ref ? _i &lt;= _ref : _i &gt;= _ref; i = 0 &lt;= _ref ? ++_i : --_i) {
+	  this.$el.find('span').eq(i).removeClass('glyphicon-star-empty').addClass('glyphicon-star');
+	}
+      }
+      if (rating &amp;&amp; rating &lt; 5) {
+	for (i = _j = rating; rating &lt;= 4 ? _j &lt;= 4 : _j &gt;= 4; i = rating &lt;= 4 ? ++_j : --_j) {
+	  this.$el.find('span').eq(i).removeClass('glyphicon-star').addClass('glyphicon-star-empty');
+	}
+      }
+      if (!rating) {
+	return this.$el.find('span').removeClass('glyphicon-star').addClass('glyphicon-star-empty');
+      }
+    };
+
+    return Starrr;
+
+  })();
+  return $.fn.extend({
+    starrr: function() {
+      var args, option;
+
+      option = arguments[0], args = 2 &lt;= arguments.length ? __slice.call(arguments, 1) : [];
+      return this.each(function() {
+	var data;
+
+	data = $(this).data('star-rating');
+	if (!data) {
+	  $(this).data('star-rating', (data = new Starrr($(this), option)));
+	}
+	if (typeof option === 'string') {
+	  return data[option].apply(data, args);
+	}
+      });
+    }
+  });
+})(window.jQuery, window);
+
+$(function() {
+  return $(".starrr").starrr();
+});
+
+$( document ).ready(function() {
+  $('.hearts').on('starrr:change', function(e, value){
+    console.log(value)
+    console.log(this.id);
+    value = value.toString();
+    var i = this.id;
+    i = i.toString();
+    rate[i]=value;
+  });
+});
+
+};
+</pre>
+</div>
+</div>
+</li></ol>
+</li>
+<li><a id="sec-5-1-0-2" name="sec-5-1-0-2"></a>Entry2.js<br  /><ol class="org-ol"><li><a id="sec-5-1-0-2-1" name="sec-5-1-0-2-1"></a>addSkills<br  /><div class="outline-text-6" id="text-5-1-0-2-1">
+<ul class="org-ul">
+<li>Description:
+</li>
+</ul>
+<p>
+Function to create a safe object to return the skill.
+</p>
+<ul class="org-ul">
+<li>Code-snippet:
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-js">var addSkills=function(skill)
+{
+    this.getSkillName=function()
+    {
+	return skill;
+    }
+}
+</pre>
+</div>
+</div>
+</li>
+<li><a id="sec-5-1-0-2-2" name="sec-5-1-0-2-2"></a>remover<br  /><div class="outline-text-6" id="text-5-1-0-2-2">
+<ul class="org-ul">
+<li>Description:
+</li>
+</ul>
+<p>
+This function is used to give a heading to each basic div of the
+user page. Moreover,it performs the crucial task of changing the class
+active for the navigation bar and also the current div which is not
+hidden is changed on button-click.
+</p>
+<ul class="org-ul">
+<li>Code-snippet
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-js">function remover(str){
+    $('.active').removeClass('active')
+    $('.common').addClass('hidden')
+    clas = '\.' + str
+    clasdiv = clas + 'div'
+    // console.log(clas)
+    $(clas).addClass('active');
+    $(clasdiv).removeClass('hidden');
+    str=str.split(/(?=[A-Z])/);
+    str=str.join(" ");
+    // console.log(str);
+    $('#fill').text(str)
+}
+</pre>
+</div>
+</div>
+</li>
+<li><a id="sec-5-1-0-2-3" name="sec-5-1-0-2-3"></a>selected<br  /><div class="outline-text-6" id="text-5-1-0-2-3">
+<ul class="org-ul">
+<li>DESCRIPTION:
+</li>
+</ul>
+<p>
+SELECTED FUNCTION IS USED TO RETRIEVE THE SKILLS WHICH ARE SELECTED BY
+THE PROJECT-GIVER WHILE ADDING A NEW PROJECT TO THE DATABASE.IT ALSO 
+MANTAINS A DIV WHICH SHOWS THE SKILLS WHICH ARE CURRENTLY SELECTED BY THE
+PROJECT-GIVER.
+</p>
+<ul class="org-ul">
+<li>Code-Snippet
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-js">FUNCTION SELECTED() {
+    CONSOLE.LOG('1')
+    VAR SELECTED = [];
+    SELECTED = $('#OPTIONS').VAL();
+    STR = SELECTED.JOIN(',')
+    CONSOLE.LOG(STR);
+    IF (STR === '') {
+	STR = 'PLEASE SELECT SOMETHING FROM THE SKILLS LIST!'
+    } ELSE
+	STR = 'YOU SELECTED : \N ' + STR;
+    $('#SEL').TEXT(STR);
+}
+</pre>
+</div>
+</div>
+</li>
+<li><a id="sec-5-1-0-2-4" name="sec-5-1-0-2-4"></a>makeprojectgiver<br  /><div class="outline-text-6" id="text-5-1-0-2-4">
+<ul class="org-ul">
+<li>Description:
+</li>
+</ul>
+<p>
+make project-giver function is used to construct a safe object of the data
+quired by the render-page. we construct a safe-object named freelancer
+and assign it with varius necessary functions using this function.
+</p>
+<ul class="org-ul">
+<li>code-snippet
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-js">var makeprojectgiver = function(response) {
+    var csrftoken = response['csrf_token']
+    var f_name = response['first_name'];
+    var l_name = response['last_name'];
+    var email = response['emailaddress'];
+    var rating = response['rating'];
+    var ongo_projects = response['ongoproj'];
+    var comp_projects = response['pastproj'];
+    var username = response['username'];
+    console.log(username);
+    var profile_image = response['profile_image'];
+    var currbids = response['bids']
+    var projectgiver = {};
+
+    function getf_name() {
+	return f_name;
+    }
+
+    function getl_name() {
+	return l_name;
+    }
+
+    function getcsrf() {
+	return csrftoken;
+    }
+
+    function getemail() {
+	return email;
+    }
+
+    function getrating() {
+	return rating;
+    }
+
+    function getongo_projects() {
+	return ongo_projects;
+    }
+
+    function getcomp_projects() {
+	return comp_projects;
+    }
+
+    function getusername() {
+	return username;
+    }
+
+    function getimage() {
+	return profile_image;
+    }
+    function getbids(){
+	return currbids;
+    }
+    projectgiver.getf_name = getf_name;
+    projectgiver.getl_name = getl_name;
+    projectgiver.getcsrf = getcsrf;
+    projectgiver.getemail = getemail;
+    projectgiver.getrating = getrating;
+    projectgiver.getongo_projects = getongo_projects;
+    projectgiver.getcomp_projects = getcomp_projects;
+    projectgiver.getusername = getusername;
+    projectgiver.getimage = getimage;
+    projectgiver.getbids = getbids;
+    return projectgiver
+}
+</pre>
+</div>
+</div>
+</li>
+<li><a id="sec-5-1-0-2-5" name="sec-5-1-0-2-5"></a>populateprojectgiverpage<br  /><div class="outline-text-6" id="text-5-1-0-2-5">
+<ul class="org-ul">
+<li>Description:
+</li>
+</ul>
+<p>
+&#x2013; popoulateprojectgiverpage function makes an ajax call to renderpage to retrieve
+a json object from the backend.
+&#x2013; then this json object is further converted into a safe object.then the
+functions of this safe object are used to populate the user-page with
+the required fields and tables.
+&#x2013; all the tables and divs are filled using the retrieved data
+&#x2013; it is called on load
+</p>
+<ul class="org-ul">
+<li>Code-Snippet
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-js">var populateprojectgiverpage = function() {
+    $.ajax({
+	url: 'renderpage',
+	method: 'get',
+	success: function(response) {
+	    console.log("lalalsuccess")
+	    console.log(response)
+	    for( skill in response['skills'])
+	    {
+		skills.push(new addskills(response['skills'][skill]));
+	    }
+	    console.log(skills)
+	    var skillstr="&lt;option selected=\"selected\" disabled&gt;choose appropriate skills&lt;/option&gt;"
+
+	    for(skill in skills)
+	    {
+		skillstr+="&lt;option value=\""+skills[skill].getskillname()+"\"&gt;"+skills[skill].getskillname()+"&lt;/option&gt;";
+	    }
+	    $('#options').html(skillstr);
+	    console.log(skillstr);   
+	    projectgiver = makeprojectgiver(response);
+	    var str = '';
+	    var str = projectgiver.getf_name() + ' ' + projectgiver.getl_name();
+	    $('.image').attr('src','/'+projectgiver.getimage())
+	    $('#f-l-name').text(str);
+	    $('.e-id').text("  "+projectgiver.getemail());
+	    $('#head4').text(str);
+	    $('#username').text("  "+projectgiver.getusername());
+	    $('.stars').attr('data-rating', projectgiver.getrating());
+	    var table = '';
+	    for (project in projectgiver.getongo_projects()) {
+		var curr=projectgiver.getongo_projects()[project]
+		table += '&lt;tr&gt;';
+		table += '&lt;td align="center"&gt;';
+		table += '&lt;button class=\"btn btn-success btn-xs\" data-toggle=\"modal\" data-target=\".bs-example-modal-lg\" onclick=\"completeid(' + curr['id'] + ')\"&gt;&lt;span id=\"' + curr['id'] + '\"class=\"glyphicon glyphicon-ok select\" &gt;&lt;/span&gt;&lt;/button&gt;'
+		table = table + '&lt;td&gt;' + curr['title'] + '&lt;/td&gt;'
+		table = table + '&lt;td&gt;' + curr['description'] + '&lt;/td&gt;'
+		table += '&lt;/tr&gt;';
+
+	    }
+	    $('#ongotable').html(table);
+	    var table = '';
+	    for (project in projectgiver.getcomp_projects()) {
+		var curr=projectgiver.getcomp_projects()[project]
+		table += '&lt;tr&gt;';
+		table = table + '&lt;td&gt;' + curr['title'] + '&lt;/td&gt;'
+		table = table + '&lt;td&gt;' + curr['description'] + '&lt;/td&gt;'
+		table += '&lt;/tr&gt;';
+
+	    }
+	    $('#comptable').html(table);
+	    var table = '';
+	    var currbids = projectgiver.getbids();
+	    console.log(currbids)
+	    // str = '&lt;div class="modal fade bs-example-modal-lg modal2" tabindex="-1" role="dialog" aria-labelledby="mylargemodallabel"&gt;&lt;div class="modal-dialog modal-lg modal2"&gt;&lt;div class="modal-content modal2"&gt;&lt;div class="modal-body modal2"&gt;&lt;h2 style="text-weight:bold"&gt;please rate the freelancer&lt;/h2&gt;&lt;fieldset class="rating"&gt;&lt;input type="radio" id="star5" name="rating" value="5" /&gt;&lt;label for="star5" title="rocks!"&gt;5 stars&lt;/label&gt;&lt;input type="radio" id="star4" name="rating" value="4" /&gt;&lt;label for="star4" title="pretty good"&gt;4 stars&lt;/label&gt;&lt;input type="radio" id="star3" name="rating" value="3" /&gt;&lt;label for="star3" title="meh"&gt;3 stars&lt;/label&gt;&lt;input type="radio" id="star2" name="rating" value="2" /&gt;&lt;label for="star2" title="kinda bad"&gt;2 stars&lt;/label&gt;&lt;input type="radio" id="star1" name="rating" value="1" /&gt;&lt;label for="star1" title="not that great"&gt;1 star&lt;/label&gt;&lt;/fieldset&gt;&lt;br /&gt;&lt;br /&gt;&lt;button type="button" class="btn btn-danger"&gt;&lt;span&gt;submit rating&lt;/span&gt;&lt;/button&gt;&lt;br /&gt;&lt;br /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;'
+	    for (bid in currbids) {
+		console.log(bid)
+		table += '&lt;tr&gt;';
+		table += '&lt;td&gt;';
+		table += '&lt;button class=\"btn btn-success btn-xs\" onclick=\"saveid(' + currbids[bid]['id'] + ')\"&gt;&lt;span id=\"' + currbids[bid]['id'] + '\"class=\"glyphicon glyphicon-ok select\" &gt;&lt;/span&gt;&lt;/button&gt;'
+		table += '&lt;/td&gt;'
+		table = table + '&lt;td&gt;' + currbids[bid]['title'] + '&lt;/td&gt;'
+		table = table + '&lt;td&gt;' + currbids[bid]['freelancer'] + '&lt;/td&gt;'
+		table = table + '&lt;td&gt;' + '$ '+currbids[bid]['amount'] + '&lt;/td&gt;'
+		table = table + '&lt;td&gt;' + currbids[bid]['duration'] +' days' + '&lt;/td&gt;'
+		table = table + '&lt;td&gt;' + currbids[bid]['budget'] + '&lt;/td&gt;'
+
+		table += '&lt;/tr&gt;';
+	    }
+	    $('#bidstable').html(table);
+	    var rating=projectgiver.getrating();
+	    rating=parsefloat(rating);
+	    var numstars = 5;
+	    console.log(rating);
+	    console.log(math.floor(rating + 1))
+	    var fullstar = new array(math.floor(rating + 1)).join('&lt;i class="glyphicon glyphicon-star"&gt;&lt;/i&gt;');
+	    var halfstar = ((rating%1) !== 0) ? '&lt;i class="glyphicon glyphicon-star half"&gt;&lt;/i&gt;': '';
+
+	    var nostar = new array(math.floor(numstars + 1 - rating)).join('&lt;i class="glyphicon glyphicon-star-empty"&gt;&lt;/i&gt;');
+	    $('#stars').html(fullstar + halfstar + nostar);
+	    $('#rating').text(rating+'/'+numstars);
+	    $('#csrf').val(projectgiver.getcsrf());
+	    $('input[name="fname"]').attr('value', projectgiver.getf_name());
+	    $('input[name="lname"]').attr('value', projectgiver.getl_name());
+	    $('input[name="email"]').attr('value', projectgiver.getemail());
+
+	},
+	error: function(xhr, display, ethrow) {
+	    console.log("error");
+	    return display;
+	}
+    });
+}
+</pre>
+</div>
+</div>
+</li>
+<li><a id="sec-5-1-0-2-6" name="sec-5-1-0-2-6"></a>makeId<br  /><div class="outline-text-6" id="text-5-1-0-2-6">
+<ul class="org-ul">
+<li>Description:
+</li>
+</ul>
+<p>
+makeId function generates a safeobject named pid using which we can
+fetch the id using the defined function 'getId'.
+</p>
+<ul class="org-ul">
+<li>Code-snippet
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-js">var makeId = function(id){
+    var pid ={};
+    var getId = function(){
+	return id;
+    }
+    pid.getId = getId;
+    return pid;
+}
+</pre>
+</div>
+</div>
+</li>
+<li><a id="sec-5-1-0-2-7" name="sec-5-1-0-2-7"></a>saveId<br  /><div class="outline-text-6" id="text-5-1-0-2-7">
+<ul class="org-ul">
+<li>Description:
+</li>
+</ul>
+<p>
+On function call it gets an id from the button which is actually the
+project-id.This project-id from here is sent to a function to be converted
+into a safe object.
+Then this project-id is sent to the backend on appropriate 
+button-click to signify the acceptance of a particular bid.
+</p>
+<ul class="org-ul">
+<li>Code-snippet
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-js">var saveId = function(id){
+    pid = makeId(id);
+    $.ajax({
+	url: 'confirm',
+	method: 'POST',
+	data: {
+	    'csrfmiddlewaretoken' : projectgiver.getCsrf(),
+	    'bid_id' : pid.getId(),
+	},
+	success : function(response){
+	    location.reload();
+	},
+	error: function(xhr, display, eThrow) {
+	    console.log("error");
+	    return display;
+	},
+    });
+}
+</pre>
+</div>
+</div>
+</li>
+<li><a id="sec-5-1-0-2-8" name="sec-5-1-0-2-8"></a>completeId<br  /><div class="outline-text-6" id="text-5-1-0-2-8">
+<ul class="org-ul">
+<li>Description:
+</li>
+</ul>
+<p>
+It just makes a call to function makeId to  get a safe object to be
+referred later.
+</p>
+<ul class="org-ul">
+<li>Code-Snippet
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-js">var completeId = function(id){
+
+    pid = makeId(id);
+
+}
+</pre>
+</div>
+</div>
+</li>
+<li><a id="sec-5-1-0-2-9" name="sec-5-1-0-2-9"></a>complete<br  /><div class="outline-text-6" id="text-5-1-0-2-9">
+<ul class="org-ul">
+<li>Description:
+</li>
+</ul>
+<p>
+This function sends an ajax request to the url completed with data 
+consisting of project_id and the rating being given to the assigned 
+freelancer on the completion of project.The running of this function
+signifies the completion of the project.
+</p>
+<ul class="org-ul">
+<li>Code-Snippet
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-js">var complete = function(){
+    console.log(pid.getId())
+    console.log($('input[name=rating]:checked').val());
+    $.ajax({
+	url: 'completed',
+	method: 'POST',
+	data: {
+	    'csrfmiddlewaretoken' : projectgiver.getCsrf(),
+	    'proj_id' : pid.getId(),
+	    'rating' : $('input[name=rating]:checked').val(),
+	},
+	success : function(response){
+	    location.reload();
+	    //console.log(response)
+	},
+	error: function(response) {
+	    //console.log("error");
+	    //console.log(response);
+	    return display;
+	},
+    });
+}
+</pre>
+</div>
+</div>
+</li>
+<li><a id="sec-5-1-0-2-10" name="sec-5-1-0-2-10"></a>makeEditedUser<br  /><div class="outline-text-6" id="text-5-1-0-2-10">
+<ul class="org-ul">
+<li>Description:
+</li>
+</ul>
+
+<p>
+makeEditedUser function is used to validate the input fields given
+to the edit-user page.It does various kinds of validations on the input
+and allows the editer function to be called only if all the validations
+are passed for 'first-name' , 'last-name' &amp; 'email'. 
+</p>
+<ul class="org-ul">
+<li>Code-snippet
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-js">var makeEditedUser = function() {
+    console.log('dfd')
+    firstname = $('input[name="fname"]').val();
+    lastname = $('input[name="lname"]').val();
+    email = $('input[name="email"]').val();
+    if ((/^[a-zA-Z ]+$/.test(firstname) == false)) {
+	alert("Check firstname");
+	return null;
+    }
+    if ((/^[a-zA-Z ]+$/.test(lastname) == false)) {
+	alert("Check lastname");
+	return null;
+    }
+    if ((/^(([^&lt;&gt;()\[\]\\.,;:\s@"]+(\.[^&lt;&gt;()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email) == false)) {
+	alert("check emaiol");
+	return null;
+    }
+    console.log(firstname);
+    editer(firstname, lastname, email);
+}
+</pre>
+</div>
+</div>
+</li>
+<li><a id="sec-5-1-0-2-11" name="sec-5-1-0-2-11"></a>editer<br  /><div class="outline-text-6" id="text-5-1-0-2-11">
+<ul class="org-ul">
+<li>Description:
+</li>
+</ul>
+<p>
+editer function is used to send an ajax request to the url editprofile
+It sends request to editprofile route to edit the current fields of the
+freelancer.
+</p>
+<ul class="org-ul">
+<li>Code-snippet:
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-js">function editer(firstname,lastname,email){
+    $.ajax({
+	url: 'editprofile',
+	method: 'POST',
+	data : {
+	    'csrfmiddlewaretoken' : projectgiver.getCsrf(),
+	    'fname' : firstname,
+	    'lname' : lastname,
+	    'email' : email,
+	},
+	success: function(response){
+	    window.location='/projectgiver'
+	},
+	error: function(xhr,display,eThrow){
+	    console.log(display);
+	}
+    });
+ }
+</pre>
+</div>
+</div>
+</li>
+<li><a id="sec-5-1-0-2-12" name="sec-5-1-0-2-12"></a>notificationMaker<br  /><div class="outline-text-6" id="text-5-1-0-2-12">
+<ul class="org-ul">
+<li>Description:
+</li>
+</ul>
+<p>
+This function creates a safe object for the notifications recieved
+from the backend and attaches functions to the safe-object so formed 
+for further use
+</p>
+<ul class="org-ul">
+<li>Code-snippet
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-js">var notificationMaker=function(notification)
+{
+    var projectName=notification['project'];
+    var projectGiver=notification['project_poster'];
+    var notificationType=notification['noti_type'];
+    var notificationId=notification['notification_id'];
+    console.log(projectName);
+    this.getProjectName=function()
+    {
+	return projectName; 
+    }
+    this.getProjectGiver=function()
+    {
+	return projectGiver;
+    }
+    this.getType=function()
+    {
+      return notificationType;
+    }
+    this.getId=function()
+    {
+      return notificationId;
+    }
+
+}
+</pre>
+</div>
+</div>
+</li>
+<li><a id="sec-5-1-0-2-13" name="sec-5-1-0-2-13"></a>makeNotifications<br  /><div class="outline-text-6" id="text-5-1-0-2-13">
+<ul class="org-ul">
+<li>Description:
+</li>
+</ul>
+<p>
+makeNotifications function makes an ajax call to url notifications
+and fetches the notifications using 'GET'.It then populates the 
+notification icon in the navbar which onclick shows the required 
+notification.It is called on window load.
+</p>
+<ul class="org-ul">
+<li>Code-snippet
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-js">var makeNotifications=function()
+{
+    notification.length=0
+    $.ajax({
+	url:'notifications',
+	method:'GET',
+	success:function(response)
+	{
+	    test=response;
+	    console.log(response);
+	    for (i in response['notification_list'])
+	    {
+		console.log(i);
+		notification.push(new notificationMaker(response['notification_list'][i]));
+	    }
+	    var str="&lt;a href=\"#\" class=\"icon-info\" data-toggle=\"dropdown\" onclick=\"notificationRemover()\"&gt;&lt;span class=\"glyphicon glyphicon-bell\" aria-hidden=\"true\"&gt;&lt;/span&gt;\""+
+		    "&lt;span class=\"label label-primary\" id=\"notification\"&gt;"+notification.length+"&lt;/span&gt;&lt;/a&gt;&lt;ul class=\"dropdown-menu notiff\"&gt;&lt;li&gt;"
+	    for(currentNotfications in notification)
+	    {
+		str+="&lt;div class=\"navbar-content\"&gt;"+"&lt;span id=\"Ongoing\"&gt;&lt;/span&gt;"+
+		"&lt;a class=\"text-muted small\" class=\"e-id\"&gt;"+"A bid has been placed on your project : "+notification[currentNotfications].getProjectName()+"&lt;/a&gt;"+
+		"&lt;/div&gt;&lt;div class=\"divider\"&gt;&lt;/div&gt;";
+	    }
+	    str+="&lt;/li&gt;&lt;/ul&gt;";
+	    $('#viewNotification').html(str);
+	},
+	error:function(response)
+	{
+	    alert(response.responseText)
+	}
+    });
+}
+</pre>
+</div>
+</div>
+</li>
+<li><a id="sec-5-1-0-2-14" name="sec-5-1-0-2-14"></a>notificationRemover<br  /><div class="outline-text-6" id="text-5-1-0-2-14">
+<ul class="org-ul">
+<li>Description:
+</li>
+</ul>
+<p>
+NotificationRemover function is used to remove the seen notifications 
+sent to url using a seanarr parameter using an ajax request.
+</p>
+<ul class="org-ul">
+<li>Code-snippet
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-js">var notificationRemover=function()
+{
+  seenarr=[];
+  for(notis in notification)
+  {
+    seenarr.push(notification[notis].getId())  
+  }
+  console.log(seenarr)
+  $.ajax({
+    url:'clicknotification',
+    method:'POST',
+    data:{
+	  'csrfmiddlewaretoken' : projectgiver.getCsrf(),
+	  'seenarr' : seenarr,
+    },
+    success: function(response)
+    {
+      console.log(response);
+    },
+    error:function(response)
+    {
+      console.log(response.responseText);
+    }
+
+
+  });
+
+}
+</pre>
+</div>
+</div>
+</li>
+<li><a id="sec-5-1-0-2-15" name="sec-5-1-0-2-15"></a>add<br  /><div class="outline-text-6" id="text-5-1-0-2-15">
+<ul class="org-ul">
+<li>Description:
+</li>
+</ul>
+<p>
+Function add is used to validate the input fields for adding a project
+to the database.It gives validation checks to the input fields of the
+addProject modal and does not allow fields to be added if the input 
+does not pass vallidation tests
+</p>
+<ul class="org-ul">
+<li>Code-Snippet:
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-js">var add = function() {
+    var pro_name = $('input[name="Title"]').val();
+    var budget = $('input[name="budget"]').val();
+    var deadline = $('input[name="deadline"]').val();
+    var selected = $('#options').val();
+    var description = $('textarea[name="description"]').val();
+    if ((/^[a-zA-Z ]+$/.test(pro_name) == false) || pro_name=="") {
+	alert("Check Title");
+	return null;
+    }
+    if(/\D/.test(budget) || budget=="") {
+	alert("Check budget");
+	return null
+    }
+    if((((/^([0-9]{2})[-\/]([0-9]{2})[-\/]([0-9]{4})+$/).test(deadline))==false) || deadline==""){
+	alert("Check Deadline");
+	return null;
+    }   
+       console.log('here')
+       console.log(selected)
+    addpro(pro_name,budget,selected,deadline,description);
+}
+</pre>
+</div>
+</div>
+</li>
+<li><a id="sec-5-1-0-2-16" name="sec-5-1-0-2-16"></a>addPro<br  /><div class="outline-text-6" id="text-5-1-0-2-16">
+<ul class="org-ul">
+<li>Description:
+</li>
+</ul>
+<p>
+function addpro is used to make an ajax request to the url addPro.It
+sends a 'POST' request to add the project with all the required fields
+ie. Title , budget , project_skills , deadline &amp; description.On success
+it redirects to the page /projectgiver.
+</p>
+<ul class="org-ul">
+<li>Code-Snippet:
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-js">var addpro = function(pro_name,budget,selected,deadline,description){
+$.ajax({
+	url: 'addPro',
+	method: 'POST',
+	data: {
+	    'csrfmiddlewaretoken': projectgiver.getCsrf(),
+	    'Title': pro_name,
+	    'budget' : budget,
+	    'project_skills' : selected,
+	    'deadline': deadline,
+	    'description' : description,
+	},
+	success: function(response) {
+	    window.location='/projectgiver'
+	},
+	error: function(xhr, display, eThrow) {
+	    console.log(display);
+	}
+    });   
+}
+</pre>
+</div>
+</div>
+</li></ol>
+</li>
+
+<li><a id="sec-5-1-0-3" name="sec-5-1-0-3"></a>Index.js<br  /><ol class="org-ol"><li><a id="sec-5-1-0-3-1" name="sec-5-1-0-3-1"></a>gethash<br  /><div class="outline-text-6" id="text-5-1-0-3-1">
+<ul class="org-ul">
+<li>Description:
+</li>
+</ul>
+<p>
+getHash function is used to fetch the hash of the current url and
+use it like hash as 'inbox' or 'register'
+</p>
+<ul class="org-ul">
+<li>Code-snippet
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-js">function gethash()
+{
+    a='.'+window.location.hash.substring(1)+'Modal';
+    $(a).modal({
+    show: true,
+   })
+}
+</pre>
+</div>
+</div>
+</li>
+<li><a id="sec-5-1-0-3-2" name="sec-5-1-0-3-2"></a>rotateCard<br  /><div class="outline-text-6" id="text-5-1-0-3-2">
+<ul class="org-ul">
+<li>Description
+</li>
+</ul>
+<p>
+Rotate Card function is used to removeclass hover from the card 
+which is used to rotate the card being shown on the homepage of 
+the freelancer 
+</p>
+<ul class="org-ul">
+<li>Code-Snippet
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-js">function rotateCard(btn){
+    var $card = $(btn).closest('.card-container');
+    console.log($card);
+    if($card.hasClass('hover')){
+	$card.removeClass('hover');
+    } else {
+	$card.addClass('hover');
+    }
+}
+</pre>
+</div>
+</div>
+</li>
+<li><a id="sec-5-1-0-3-3" name="sec-5-1-0-3-3"></a>sendOtp<br  /><div class="outline-text-6" id="text-5-1-0-3-3">
+<ul class="org-ul">
+<li>Description:
+</li>
+</ul>
+<p>
+sendOtp function sends a POST request to the url 'sendOtp' in
+which the email is send and then backend sends the OTP to the email 
+id sent to the url
+</p>
+<ul class="org-ul">
+<li>Code-Snippet:
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-js">jQuery(document).on('click', '#inputOtp', function sendOtp()
+{
+    $.ajax({
+	url: 'http://127.0.0.1:8000/sendOtp',
+	method: 'POST',
+	data: { 
+		email: $('#inputRegisterEmail').val(),
+	},
+	success: function (response) {
+	    console.log("suces")
+
+	},
+	error: function(response){
+	    a=response;
+
+	}
+	});
+    $('#inputOtp').text("Resend");
+    console.log("otp");
+
+});
+</pre>
+</div>
+</div>
+</li>
+<li><a id="sec-5-1-0-3-4" name="sec-5-1-0-3-4"></a>hashlogin<br  /><div class="outline-text-6" id="text-5-1-0-3-4">
+<ul class="org-ul">
+<li>Description:
+</li>
+</ul>
+<p>
+It changes the window location hash of the current page to the 
+one which is specified ie. #login
+</p>
+<ul class="org-ul">
+<li>Code-Snippet
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-js">function hashlogin()
+{
+    window.location.hash='#login';
+}
+</pre>
+</div>
+</div>
+</li>
+<li><a id="sec-5-1-0-3-5" name="sec-5-1-0-3-5"></a>hashregister<br  /><div class="outline-text-6" id="text-5-1-0-3-5">
+<ul class="org-ul">
+<li>Description:
+</li>
+</ul>
+<p>
+It changes the window location hash of the current page to the 
+one which is specified ie. #register
+</p>
+<ul class="org-ul">
+<li>Code-Snippet
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-js">function hashlogin()
+{
+    window.location.hash='#register';
+}
+</pre>
+</div>
+</div>
+</li>
+
+<li><a id="sec-5-1-0-3-6" name="sec-5-1-0-3-6"></a>showInvalid<br  /><div class="outline-text-6" id="text-5-1-0-3-6">
+<ul class="org-ul">
+<li>Description:
+</li>
+</ul>
+<p>
+It shows the invalid-input message based on the current window.
+location.hash
+</p>
+<ul class="org-ul">
+<li>Code-Snippet
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-js">function showInvalid()
+{
+    var str = window.location.hash;
+    console.log(str)
+    str = str.substr(1);
+    if(str==="Login" || str==="Register"){
+	$('.invalid').removeClass('hidden')
+    }
+    else $('.invalid').addClass('hidden');
+}
+</pre>
+</div>
+</div>
+</li>
+<li><a id="sec-5-1-0-3-7" name="sec-5-1-0-3-7"></a>existingUserNames<br  /><div class="outline-text-6" id="text-5-1-0-3-7">
+<ul class="org-ul">
+<li>Description:
+</li>
+</ul>
+<p>
+It creates a safe object with functions to safely access the fields
+using specified functions.
+</p>
+<ul class="org-ul">
+<li>Code-Snippet:
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-js">var existingUserNames=function(username,email)
+{
+    this.getUsername=function()
+    {
+	return username;
+    }
+    this.getEmail=function()
+    {
+	return email;
+    }
+}
+</pre>
+</div>
+</div>
+</li>
+<li><a id="sec-5-1-0-3-8" name="sec-5-1-0-3-8"></a>userMaker<br  /><div class="outline-text-6" id="text-5-1-0-3-8">
+<ul class="org-ul">
+<li>Description:
+</li>
+</ul>
+<p>
+User-Maker function verifies the fields entered while registration.
+It checks for various things like:
+&#x2013; username already exists
+&#x2013; check firstname
+&#x2013; check lastname
+&#x2013; check email(email validation is wrong)
+&#x2013; email already exists
+&#x2013; passwords are not equal
+&#x2013; password strength is not upto the mark
+If all the tests are passed successfully then a safe object is created
+and used further for registering the user.
+</p>
+<ul class="org-ul">
+<li>Code-Snippet:
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-js">var userMaker=function(username,firstname,lastname,email,userType,password,passwordConfirm,rating,otp) //make safe object // //validation//
+{
+    for(existingUserName in users)
+    {
+	if(users[existingUserName].getUsername()===username)
+	{
+	    alert("username already exists");
+	    return null;
+	}
+    }
+    alert("valid username");
+    if((/^[a-zA-Z ]+$/.test(firstname)==false))
+    {
+	alert("Check firstname");
+	return null;
+    }
+    if((/^[a-zA-Z ]+$/.test(lastname)==false))
+    {
+	alert("Check lastname");
+	return null;
+    }
+    if((/^(([^&lt;&gt;()\[\]\\.,;:\s@"]+(\.[^&lt;&gt;()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)==false))
+    {
+	alert("check email");
+	return null;
+    }
+    for(existingEmails in users)
+    {
+	if(users[existingEmails].getEmail()===email)
+	{
+	    alert("email already exists");
+	    return null;
+	}
+    } 
+    alert("valid email");
+    if(password!=passwordConfirm &amp;&amp; password!="")
+    {
+	alert("passwords are not equal");
+	return  null;
+    }
+    var level = 0;
+    var input = password;
+    alert(input)
+    switch(true){
+	case /^(?:([A-Z])*){8,12}$/.test(input):
+	level = 1;
+	break;
+
+	case /^(?:([a-z])*){8,12}$/.test(input):
+	level = 1;
+	break;
+
+	case /^(?:([\d])*){8,12}$/.test(input):
+	level = 1;
+	break;
+
+	case /^(?:([\W])*){8,12}$/.test(input):
+	level = 1;
+	break;
+
+	case /^(?:([A-Z])*([a-z])*){8,12}$/.test(input):
+	level = 2;
+	break;
+
+	case /^(?:([A-Z])*([a-z])*(\d)*){8,12}$/.test(input):
+	level = 3;
+	break;
+
+	case /^(?:([A-Z])*([a-z])*(\d)*(\W)*){8,12}$/.test(input):
+	level = 4;
+	break;
+    }
+    alert(level)
+    if(level==1 || input.length &lt; 8){
+	alert("Enter a stronger password");
+	return null;    
+    }
+    this.getUsername=function()
+    {
+	return username;
+    }
+    this.getFirstName=function()
+    {
+	return firstname;
+    }
+    this.getLastName=function()
+    {
+	return lastname;
+    }
+    this.getEmail=function()
+    {
+	return email;
+    }
+    this.getOTP=function()
+    {
+	return otp;
+    }
+    this.getUserType=function()
+    {
+	return userType;
+    }
+    this.getPassword=function()
+    {
+	return password;
+    }
+    this.getPasswordConfirm=function()
+    {
+	return passwordConfirm;
+    }
+    this.getRating=function()
+    {
+	return rating;        
+    }
+
+}
+</pre>
+</div>
+</div>
+</li>
+<li><a id="sec-5-1-0-3-9" name="sec-5-1-0-3-9"></a>makeUser<br  /><div class="outline-text-6" id="text-5-1-0-3-9">
+<ul class="org-ul">
+<li>Description:
+</li>
+</ul>
+<p>
+This function fetches all the values from the html input fields.
+Then it uses the input fields to create a safe object which if not
+formed due to some validation error returns null from the function.
+Otherwise it leads to an ajax request being sent to the url /register
+with all the required fields for registering the freelancer/projectgiver
+to successfully register it.
+</p>
+<ul class="org-ul">
+<li>Code-Snippet:
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-js">var makeUser = function()
+{
+    var csrftoken = Cookies.get('csrftoken');
+    var username=$('#inputRegisterUsername').val();
+    var firstname=$('#inputRegisterFirstName').val();  
+    var lastname=$('#inputRegisterLastName').val();
+    var email=$('#inputRegisterEmail').val();
+    var userType=$('input[name="userType"]:checked').val();
+    var password=$('#inputRegisterPassword').val();
+    var passwordConfirm=$('#inputRegisterPasswordConfirm').val();
+    var otp=$('#otp').val();
+    var cookieValue = null;
+    var userToRegister = new userMaker(username,firstname,lastname,email,userType,password,passwordConfirm,0,otp)
+    console.log(userToRegister);
+    if(userToRegister===null)
+    {
+	return;
+    }
+    $.ajaxSetup({
+    beforeSend: function(xhr, settings) 
+    {
+	if (!csrfSafeMethod(settings.type) &amp;&amp; !this.crossDomain) 
+	{
+	    xhr.setRequestHeader("X-CSRFToken", csrftoken);
+	}
+    }
+    });
+    $.ajax({
+	    url: '/register',
+	    method: 'POST',
+	    data: {
+	    'csrfmiddlewaretoken':csrftoken,
+	    'username' :userToRegister.getUsername(),
+	    'fname' :userToRegister.getFirstName(),
+	    'lname' :userToRegister.getLastName(),
+	    'email' :userToRegister.getEmail(),
+	    'userType':userToRegister.getUserType(),
+	    'password':userToRegister.getPassword(),
+	    'confirm_password':userToRegister.getPasswordConfirm(),
+	    'otp':userToRegister.getOTP(),
+	    },
+	    success: function (response) {
+		window.location.hash="";
+		window.location=response;
+		a=response;
+	    },
+	    error: function(response){
+		alert(response.responseText);
+		a=response;
+	    }
+	    });
+    return ;
+
+}
+</pre>
+</div>
+</div>
+</li>
+<li><a id="sec-5-1-0-3-10" name="sec-5-1-0-3-10"></a>existingUserLogin<br  /><div class="outline-text-6" id="text-5-1-0-3-10">
+<ul class="org-ul">
+<li>Description:
+</li>
+</ul>
+<p>
+This function gets the input fields from the ones entered into the 
+input fields of the login modal and sends them to the backend to the 
+url /authen.The backend url has the task to authenticate and if 
+correct then allow the current user to log into its session.
+</p>
+<ul class="org-ul">
+<li>Code-Snippet
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-js">var existingUserlogin=function()
+{
+    var csrftoken = Cookies.get('csrftoken');
+    var username=$('#inputUsername').val();
+    var password=$('#inputPassword').val();
+    $.ajaxSetup({
+    beforeSend: function(xhr, settings) 
+    {
+	if (!csrfSafeMethod(settings.type) &amp;&amp; !this.crossDomain) 
+	{
+	    xhr.setRequestHeader("X-CSRFToken", csrftoken);
+	}
+    }
+    });
+    $.ajax({
+	    url: '/authen',
+	    method: 'POST',
+	    data: {
+	    'csrfmiddlewaretoken':csrftoken,
+	    'username' :username,
+	    'password':password
+	    },
+	    success: function (response) {
+		console.log(response)
+		window.location.hash="";
+		window.location=response;
+		a=response;
+	    },
+	    error: function(response){
+		a=response;
+	    }
+	    });
+    return ;
+}
+</pre>
+</div>
+</div>
+</li></ol>
+</li>
+
+<li><a id="sec-5-1-0-4" name="sec-5-1-0-4"></a>search.js<br  /><ol class="org-ol"><li><a id="sec-5-1-0-4-1" name="sec-5-1-0-4-1"></a>addSkills<br  /><div class="outline-text-6" id="text-5-1-0-4-1">
+<ul class="org-ul">
+<li>Description:
+</li>
+</ul>
+<p>
+addSkills is the safeobject for the skills that exist in database, this is being used to populate the avaialable skills
+from the back end.
+</p>
+<ul class="org-ul">
+<li>Code-snippet
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-js">var addSkills = function(skill) {
+    this.getSkillName = function() {
+	return skill;
+    }
+}
+</pre>
+</div>
+</div>
+</li>
+<li><a id="sec-5-1-0-4-2" name="sec-5-1-0-4-2"></a>populateSkills<br  /><div class="outline-text-6" id="text-5-1-0-4-2">
+<ul class="org-ul">
+<li>Description:
+</li>
+</ul>
+<p>
+populateSkills sends a post request to the backend to get the available skills and uses the model maker <code>addSkills</code> to populate
+the skills list.
+</p>
+<ul class="org-ul">
+<li>Code-snippet
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-js">var populateSkills = function() {
+	$.ajax({
+	    url: 'skills',
+	    method: 'GET',
+	    success: function(response) {
+		for (skill in response['skills']) {
+		    skills.push(new addSkills(response['skills'][skill]));
+		}
+		var skillstr = "&lt;ul class=\"list-group\"&gt;"
+		for (skill in skills) {
+		    skillstr += "&lt;li class=\"list-group-item\"&gt;&lt;div class=\"checkbox\"&gt;&lt;label&gt;&lt;input type=\"checkbox\" name=\"checks\" value=\"" + skills[skill].getSkillName() + "\"&gt;" + skills[skill].getSkillName() +
+			"&lt;/label&gt;&lt;/div&gt;&lt;/li&gt;"
+		}
+		skillstr += "&lt;/ul&gt;"
+		$('#skillsBody').html(skillstr);
+	    }
+
+	});
+    }
+</pre>
+</div>
+</div>
+</li>
+<li><a id="sec-5-1-0-4-3" name="sec-5-1-0-4-3"></a>projectMaker<br  /><div class="outline-text-6" id="text-5-1-0-4-3">
+<ul class="org-ul">
+<li>Description
+</li>
+</ul>
+<p>
+projectMaker serves as the model maker for a project.
+</p>
+<ul class="org-ul">
+<li>Code-Snippet
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-js">var projectMaker = function(project) {
+
+    this.getSkillType = function() {
+	return project.skill_type;
+    }
+    this.getBudget = function() {
+	return project.budget;
+    }
+    this.getTitle = function() {
+	return project.Title;
+    }
+    this.getDescription = function() {
+	return project.description;
+    }
+    this.getProjectPoster = function() {
+	return project.ProjectPoster;
+    }
+    this.getProjectPoster = function() {
+	return project.ProjectPoster;
+    }
+    this.getDeadline = function() {
+	return project.deadline;
+    }
+    this.getNoBids = function() {
+	return project.nobids;
+    }
+    this.getProjectPK = function() {
+	return project.project.projectid;
+    }
+    this.getIfRrated = function() {
+	return project.project.bid_status
+    }
+    this.getButtonClass = function() {
+	return project.buttonVal;
+    }
+
+}
+</pre>
+</div>
+</div>
+</li>
+<li><a id="sec-5-1-0-4-4" name="sec-5-1-0-4-4"></a>search<br  /><div class="outline-text-6" id="text-5-1-0-4-4">
+<ul class="org-ul">
+<li>Description
+</li>
+</ul>
+<p>
+This function sends a get request to the backend to get all the skills w.r.t filters and sort type applied and uses the response
+to make the safe object by calling <code>projectMaker</code>,  it then uses it to populate the <code>search container</code>.
+</p>
+<ul class="org-ul">
+<li>Code-snippet
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-js">var search = function() {
+    var projects = [];
+    var ordering = $('input[name="ordering"]:checked').val();
+    var checks = new Array();
+    $("input[name='checks']:checked").each(function(i) {
+	checks.push($(this).val());
+    });
+    var name = $('input[name="search_pro_name"]').val();
+    $.ajax({
+	url: 'searchskill',
+	data: {
+
+	    'checks': checks,
+	    'ordering': ordering,
+	    'nameSearch': name,
+	},
+	method: 'GET',
+	success: function(response) {
+	    test = response;
+	    var projectstr = "";
+	    var noofProjects = "";
+	    for (projs in response['proj_list']) {
+		projects.push(new projectMaker(response['proj_list'][projs]));
+	    }
+	    noofProjects += "&lt;strong class=\"text-danger\"&gt;" + response['proj_list'].length + "&lt;/strong&gt; results were found"
+	    $('#searchResults').html(noofProjects);
+	    for (projs in projects) {
+		projectstr += "&lt;article class=\"search-result row\"&gt;&lt;div class=\"col-xs-12 col-sm-12 col-md-3\"&gt;&lt;ul class=\"meta-search\"&gt;" +
+		    "&lt;li&gt;&lt;i class=\"glyphicon glyphicon-calendar\"&gt;&lt;/i&gt;" + "&lt;span&gt;" + projects[projs].getDeadline() + "&lt;/span&gt;&lt;/li&gt;" +
+		    "&lt;li&gt;&lt;i class=\"glyphicon glyphicon-usd\"&gt;&lt;/i&gt;" + "&lt;span&gt;" + projects[projs].getBudget() + "&lt;/span&gt;&lt;/li&gt;" +
+		    "&lt;li&gt;&lt;i class=\"glyphicon glyphicon-tags\"&gt;&lt;/i&gt;" + "&lt;span&gt;" + projects[projs].getNoBids() + "&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;";
+		projectstr += "&lt;div class=\"col-xs-12 col-sm-12 col-md-7 excerpet\"&gt;" +
+		    "&lt;h3&gt;&lt;a href=\"#\" title=\"\"&gt;" + projects[projs].getTitle() + "&lt;/a&gt;&lt;/h3&gt;" +
+		    "&lt;p class=\"divp\"&gt;" + projects[projs].getDescription() + "&lt;/p&gt;"
+		if (projects[projs].getIfRrated() == false) {
+		    projectstr += "&lt;span class=\"plus\" id=\"" + projects[projs].getProjectPK() + "\"&gt;&lt;a href=\"#\" class=\"" + projects[projs].getProjectPK() + "\" id='bidclick' data-toggle=\"modal\" data-target=\"#myModal\" onclick=\"pid=new idSelector(this.className)\"&gt;Bid&lt;/a&gt;&lt;/span&gt;"
+		} else {
+		    projectstr += "&lt;span class=\"minus\" id=\"" + projects[projs].getProjectPK() + "\"&gt;&lt;a href=\"#\" class=\"" + projects[projs].getProjectPK() + "\" id='bidclick'&gt;Bid&lt;/a&gt;&lt;/span&gt;"
+		} +
+		"&lt;span class=\"clearfix borda\"&gt;&lt;/span&gt;";
+		var str = projects[projs].getSkillType();
+		str = str.join(',')
+		projectstr += "&lt;p class=\"divp\"&gt;" + str + "&lt;/p&gt;"
+		projectstr += "&lt;/article&gt;&lt;/div&gt;"
+		projectstr += "&lt;hr /&gt;";
+	    }
+	    $('#projectPopulate').html(projectstr);
+
+	},
+	error: function(response) {
+	    console.log(response.responseText);
+	}
+    });
+
+}
+</pre>
+</div>
+</div>
+</li>
+<li><a id="sec-5-1-0-4-5" name="sec-5-1-0-4-5"></a>update<br  /><div class="outline-text-6" id="text-5-1-0-4-5">
+<ul class="org-ul">
+<li>Description 
+</li>
+</ul>
+<p>
+This function takes two parameters <code>slider</code> and <code>val</code> , it then access the ids <code>amount</code> and <code>duration</code>
+from the view and sets the value to the ids <code>amount-label</code> and <code>duration-lable</code> respectively.
+</p>
+<ul class="org-ul">
+<li>Code-snippet
+</li>
+</ul>
+<pre class="example">
+function update(slider, val) {
+        var $amount = slider == 1 ? val : $("#amount").val();
+        var $duration = slider == 2 ? val : $("#duration").val();
+        $total = "$" + ($amount * $duration);
+        $("#amount").val($amount);
+        $("#amount-label").text($amount);
+        $("#duration").val($duration);
+        $("#duration-label").text($duration);
+        $("#total").val($total);
+        $("#total-label").text($total);
+
+        $('#slider a').html('&lt;label&gt;&lt;span class="glyphicon glyphicon-chevron-left"&gt;&lt;/span&gt; ' + $amount + ' &lt;span class="glyphicon glyphicon-chevron-right"&gt;&lt;/span&gt;&lt;/label&gt;');
+        $('#slider2 a').html('&lt;label&gt;&lt;span class="glyphicon glyphicon-chevron-left"&gt;&lt;/span&gt; ' + $duration + ' &lt;span class="glyphicon glyphicon-chevron-right"&gt;&lt;/span&gt;&lt;/label&gt;');
+    }
+</pre>
+</div>
+</li>
+<li><a id="sec-5-1-0-4-6" name="sec-5-1-0-4-6"></a>idselector<br  /><div class="outline-text-6" id="text-5-1-0-4-6">
+<ul class="org-ul">
+<li>Description
+</li>
+</ul>
+<p>
+This serves as the model maker for the Projectids.It creates a safe object that is further used to place bids.
+</p>
+<ul class="org-ul">
+<li>Code-snippet
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-js">var idSelector = function(id) {
+       this.getProjectid = function() {
+	   return id;
+       }
+
+   }
+</pre>
+</div>
+</div>
+</li>
+
+<li><a id="sec-5-1-0-4-7" name="sec-5-1-0-4-7"></a>placeBid<br  /><div class="outline-text-6" id="text-5-1-0-4-7">
+<ul class="org-ul">
+<li>Description
+</li>
+</ul>
+<p>
+This sends a post request to place bid by using amount,duration,projectIds and the CSRF token.
+</p>
+<div class="org-src-container">
+
+<pre class="src src-js">var placeBid = function(id) {
+    var csrftoken = Cookies.get('csrftoken');
+    var projectid = pid.getProjectid();
+    var amount = $('#amount-label').html();
+    var duration = $('#duration-label').html();
+    $.ajaxSetup({
+	beforeSend: function(xhr, settings) {
+	    if (!csrfSafeMethod(settings.type) &amp;&amp; !this.crossDomain) {
+		xhr.setRequestHeader("X-CSRFToken", csrftoken);
+	    }
+	}
+    });
+
+    $.ajax({
+	url: 'addbid',
+	method: 'POST',
+	data: {
+	    'project_id': projectid,
+	    'amount': amount,
+	    'duration': duration,
+	    'csrfmiddlewaretoken': csrftoken
+	},
+	success: function(response) {
+	    location.reload()
+	},
+	error: function(response) {
+	    alert(response.responseText);
+	}
+    });
+
+}
+</pre>
+</div>
+</div>
+</li></ol>
+</li></ol>
+</div>
+</div>
+<div id="outline-container-sec-6" class="outline-2">
+<h2 id="sec-6"><span class="section-number-2">6</span> Security features</h2>
+<div class="outline-text-2" id="text-6">
+</div><div id="outline-container-sec-6-1" class="outline-3">
+<h3 id="sec-6-1"><span class="section-number-3">6.1</span> Mandatory features</h3>
+<div class="outline-text-3" id="text-6-1">
+<ul class="org-ul">
+<li>uses CSRF Token
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-6-2" class="outline-3">
+<h3 id="sec-6-2"><span class="section-number-3">6.2</span> Bonus features</h3>
+<div class="outline-text-3" id="text-6-2">
+<ul class="org-ul">
+<li>safe from sql injection attacks and XSS attacks
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-7" class="outline-2">
+<h2 id="sec-7"><span class="section-number-2">7</span> Extra features</h2>
+<div class="outline-text-2" id="text-7">
+</div><div id="outline-container-sec-7-1" class="outline-3">
+<h3 id="sec-7-1"><span class="section-number-3">7.1</span> Added a OTP request while registering users, to improve security.</h3>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Freelancer Group-1.</p>
+<p class="date">Created: 2017-04-29 Sat 11:25</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.5.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
